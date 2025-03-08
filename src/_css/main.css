@@ -1,25 +1,13 @@
 /* Main CSS file */
 
 /* Import base styles */
-@import 'base/variables.css';
-@import 'base/reset.css';
-@import 'base/typography.css';
-@import 'base/layout.css';
+@import-glob "base/*.css";
 
 /* Import component styles */
-@import 'components/topbar.css';
-@import 'components/buttons.css';
-@import 'components/forms.css';
-@import 'components/cards.css';
+@import-glob "components/*.css";
 
 /* Import utility styles */
-@import 'utilities/spacing.css';
-@import 'utilities/colors.css';
-@import 'utilities/display.css';
+@import-glob "utilities/*.css";
 
 /* Import style guide styles */
-@import 'styleguide.css';
-
-/* Import documentation styles - these will be removed once we migrate to styleguide.css */
-@import 'docs/layout.css';
-@import 'docs/prototype.css'; 
+@import 'styleguide.css'; 

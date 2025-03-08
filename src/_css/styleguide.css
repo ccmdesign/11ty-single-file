@@ -1,6 +1,6 @@
 /* Style Guide Specific Styles
- * This file contains styles that are only used for the style guide/documentation
- * and not part of the actual component library
+ * This file contains only structural styles for the style guide/documentation
+ * Visual styles have been removed to maintain only layout and structure
  */
 
 /* Layout */
@@ -18,7 +18,6 @@
 
 .styleguide-sidebar {
   flex: 0 0 250px;
-  border-right: 1px solid var(--color-gray-300);
   padding-right: 1.5rem;
 }
 
@@ -31,7 +30,6 @@
 .styleguide-nav h3 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
-  color: var(--color-gray-900);
 }
 
 .styleguide-nav-section {
@@ -44,13 +42,8 @@
 }
 
 .styleguide-nav-section h4 a {
-  color: var(--color-gray-700);
   text-decoration: none;
   font-weight: 600;
-}
-
-.styleguide-nav-section h4 a:hover {
-  color: var(--color-primary);
 }
 
 .styleguide-nav-section ul {
@@ -67,14 +60,8 @@
 .styleguide-nav-section li a {
   display: block;
   padding: 0.25rem 0;
-  color: var(--color-gray-600);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.styleguide-nav-section li a:hover {
-  color: var(--color-primary);
 }
 
 /* Component grid styles */
@@ -87,26 +74,15 @@
 
 .component-card {
   padding: 1.5rem;
-  background-color: var(--color-gray-100);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-gray-200);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.component-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
 }
 
 .component-card h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  color: var(--color-primary);
 }
 
 .component-card p {
   margin: 0;
-  color: var(--color-gray-700);
 }
 
 /* Overview grid styles */
@@ -119,56 +95,35 @@
 
 .docs-overview-item-link {
   text-decoration: none;
-  color: inherit;
   display: block;
-  transition: transform 0.2s ease-in-out;
-}
-
-.docs-overview-item-link:hover {
-  transform: translateY(-5px);
 }
 
 .docs-overview-item {
   padding: 1.5rem;
-  background-color: var(--color-gray-100);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-gray-200);
   height: 100%;
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.docs-overview-item-link:hover .docs-overview-item {
-  box-shadow: var(--shadow-md);
 }
 
 .docs-overview-item h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  color: var(--color-primary);
 }
 
 .docs-overview-item p {
   margin: 0;
-  color: var(--color-gray-700);
 }
 
 /* Component demo styles */
 .component-demo {
   margin-bottom: 2rem;
-  border: 1px solid var(--color-gray-300);
-  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
 .component-demo-preview {
   padding: 1.5rem;
-  background-color: white;
 }
 
 .component-demo-code {
   padding: 1rem;
-  background-color: var(--color-gray-100);
-  border-top: 1px solid var(--color-gray-300);
   overflow: auto;
 }
 
@@ -187,8 +142,6 @@
 }
 
 .color-swatch {
-  border: 1px solid var(--color-gray-300);
-  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
@@ -198,8 +151,6 @@
 
 .color-swatch-info {
   padding: 0.75rem;
-  background-color: white;
-  border-top: 1px solid var(--color-gray-300);
 }
 
 .color-swatch-name {
@@ -210,14 +161,12 @@
 .color-swatch-value {
   font-family: var(--font-family-mono);
   font-size: var(--font-size-sm);
-  color: var(--color-gray-700);
 }
 
 /* Typography specimens */
 .type-specimen {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--color-gray-300);
 }
 
 .type-specimen-preview {
@@ -237,7 +186,6 @@
 
 .type-specimen-value {
   font-family: var(--font-family-mono);
-  color: var(--color-gray-700);
 }
 
 /* Responsive styles */
@@ -249,8 +197,6 @@
   .styleguide-sidebar {
     flex: none;
     width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--color-gray-300);
     padding-right: 0;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
