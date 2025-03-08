@@ -10,55 +10,50 @@ layout: layout.njk
       <div class="styleguide-nav-section">
         <h4><a href="/docs/subatomic/">Subatomic</a></h4>
         <ul>
-          {% for component in collections.docs_subatomic %}
-            {% if not component.fileSlug.includes('index') %}
-              <li><a href="{{ component.url }}">{{ component.data.title }}</a></li>
-            {% endif %}
-          {% endfor %}
+          {%- set subatomicPages = collections.all | eleventyNavigation("Subatomic") -%}
+          {%- for entry in subatomicPages %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
       
       <div class="styleguide-nav-section">
         <h4><a href="/docs/atoms/">Atoms</a></h4>
         <ul>
-          {% for component in collections.docs_atoms %}
-            {% if not component.fileSlug.includes('index') %}
-              <li><a href="{{ component.url }}">{{ component.data.title }}</a></li>
-            {% endif %}
-          {% endfor %}
+          {%- set atomPages = collections.all | eleventyNavigation("Atoms") -%}
+          {%- for entry in atomPages %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
       
       <div class="styleguide-nav-section">
         <h4><a href="/docs/molecules/">Molecules</a></h4>
         <ul>
-          {% for component in collections.docs_molecules %}
-            {% if not component.fileSlug.includes('index') %}
-              <li><a href="{{ component.url }}">{{ component.data.title }}</a></li>
-            {% endif %}
-          {% endfor %}
+          {%- set moleculePages = collections.all | eleventyNavigation("Molecules") -%}
+          {%- for entry in moleculePages %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
       
       <div class="styleguide-nav-section">
         <h4><a href="/docs/organisms/">Organisms</a></h4>
         <ul>
-          {% for component in collections.docs_organisms %}
-            {% if not component.fileSlug.includes('index') %}
-              <li><a href="{{ component.url }}">{{ component.data.title }}</a></li>
-            {% endif %}
-          {% endfor %}
+          {%- set organismPages = collections.all | eleventyNavigation("Organisms") -%}
+          {%- for entry in organismPages %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
       
       <div class="styleguide-nav-section">
         <h4><a href="/docs/templates/">Templates</a></h4>
         <ul>
-          {% for component in collections.docs_templates %}
-            {% if not component.fileSlug.includes('index') %}
-              <li><a href="{{ component.url }}">{{ component.data.title }}</a></li>
-            {% endif %}
-          {% endfor %}
+          {%- set templatePages = collections.all | eleventyNavigation("Templates") -%}
+          {%- for entry in templatePages %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
     </nav>

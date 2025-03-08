@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
+  // Add the navigation plugin
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("src/_includes/**/*.css");
   eleventyConfig.addWatchTarget("src/_includes/**/*.js");

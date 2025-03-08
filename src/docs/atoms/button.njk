@@ -1,9 +1,99 @@
 ---
-layout: docs-layout.njk
+layout: component.njk
 title: Button
-description: Buttons are used to trigger actions or events.
-component: components/atoms/button
+description: Buttons allow users to take actions, and make choices, with a single tap.
+eleventyNavigation:
+  key: Button
+  parent: Atoms
 ---
+
+{% set metadata = {
+  status: "Stable",
+  usage: "Use buttons to help users carry out an action like submitting a form, starting a process, or completing a task. Buttons should clearly indicate what action will occur when the user interacts with them.",
+  props: [
+    {
+      name: "variant",
+      type: "string",
+      default: "primary",
+      description: "Controls the visual style of the button. Options: primary, secondary, outline, text."
+    },
+    {
+      name: "size",
+      type: "string",
+      default: "medium",
+      description: "Controls the size of the button. Options: small, medium, large."
+    },
+    {
+      name: "disabled",
+      type: "boolean",
+      default: "false",
+      description: "When true, prevents user interaction with the button."
+    },
+    {
+      name: "fullWidth",
+      type: "boolean",
+      default: "false",
+      description: "When true, the button will take up the full width of its container."
+    }
+  ],
+  accessibility: "<ul><li>Buttons should have a visible focus state to help keyboard users.</li><li>Use the appropriate semantic element: <code>&lt;button&gt;</code> for actions, <code>&lt;a&gt;</code> for links.</li><li>Include descriptive text that clearly indicates the button's purpose.</li></ul>",
+  guidelines: "<ul><li>Use primary buttons for the main action on a page.</li><li>Use secondary or outline buttons for less important actions.</li><li>Limit the number of primary buttons on a page to avoid confusion.</li><li>Use consistent button styles throughout your application.</li></ul>",
+  related: [
+    {
+      title: "Link",
+      url: "/docs/atoms/link/"
+    },
+    {
+      title: "Icon Button",
+      url: "/docs/atoms/icon-button/"
+    }
+  ]
+} %}
+
+{% set examples = [
+  {
+    title: "Primary Button",
+    description: "The primary button should be used for the main action on a page.",
+    rendered: '<button class="btn btn-primary">Primary Button</button>',
+    code: '<button class="btn btn-primary">Primary Button</button>'
+  },
+  {
+    title: "Secondary Button",
+    description: "The secondary button should be used for secondary actions.",
+    rendered: '<button class="btn btn-secondary">Secondary Button</button>',
+    code: '<button class="btn btn-secondary">Secondary Button</button>'
+  },
+  {
+    title: "Outline Button",
+    description: "The outline button provides a less prominent visual style.",
+    rendered: '<button class="btn btn-outline">Outline Button</button>',
+    code: '<button class="btn btn-outline">Outline Button</button>'
+  },
+  {
+    title: "Text Button",
+    description: "The text button appears as text with no background or border.",
+    rendered: '<button class="btn btn-text">Text Button</button>',
+    code: '<button class="btn btn-text">Text Button</button>'
+  },
+  {
+    title: "Button Sizes",
+    description: "Buttons come in three sizes: small, medium (default), and large.",
+    rendered: '<div class="button-group"><button class="btn btn-primary btn-sm">Small</button> <button class="btn btn-primary">Medium</button> <button class="btn btn-primary btn-lg">Large</button></div>',
+    code: '<button class="btn btn-primary btn-sm">Small</button>\n<button class="btn btn-primary">Medium</button>\n<button class="btn btn-primary btn-lg">Large</button>'
+  },
+  {
+    title: "Disabled Button",
+    description: "Buttons can be disabled to indicate that they are not interactive.",
+    rendered: '<button class="btn btn-primary" disabled>Disabled Button</button>',
+    code: '<button class="btn btn-primary" disabled>Disabled Button</button>'
+  },
+  {
+    title: "Full Width Button",
+    description: "Buttons can be set to take up the full width of their container.",
+    rendered: '<div style="max-width: 300px;"><button class="btn btn-primary btn-block">Full Width Button</button></div>',
+    code: '<button class="btn btn-primary btn-block">Full Width Button</button>'
+  }
+] %}
 
 <h2>Button</h2>
 
@@ -11,11 +101,13 @@ component: components/atoms/button
 
 <div class="component-demo">
   <div class="component-demo-preview">
-    <button class="btn">Default Button</button>
+    {% include "components/atoms/button/button.njk" %}
   </div>
   
   <div class="component-demo-code">
-    <pre><code class="language-html">&lt;button class="btn"&gt;Default Button&lt;/button&gt;</code></pre>
+    <pre><code class="language-html">    
+  
+    </code></pre>
   </div>
 </div>
 
