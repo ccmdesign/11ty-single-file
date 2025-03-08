@@ -1,0 +1,19 @@
+---
+layout: docs-layout.njk
+title: Atoms
+---
+
+<h2>Atoms</h2>
+
+<p>Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.</p>
+
+<div class="component-grid">
+  {% for component in collections.docs_atoms %}
+    {% if not component.fileSlug.includes('index') %}
+    <div class="component-card">
+      <h3><a href="{{ component.url }}">{{ component.data.title }}</a></h3>
+      <p>{{ component.data.description }}</p>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

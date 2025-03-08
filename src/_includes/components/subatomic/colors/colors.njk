@@ -1,0 +1,12 @@
+<div class="color-palette">
+  {% for color in colors %}
+    <div class="color-swatch">
+      <div class="color-preview" style="background-color: {{ color.value }}"></div>
+      <div class="color-info">
+        <div class="color-name">{{ color.name }}</div>
+        <div class="color-value">{{ color.value }}</div>
+        <div class="color-variable">{{ color.variable }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div> 

@@ -1,0 +1,19 @@
+---
+layout: docs-layout.njk
+title: Subatomic
+---
+
+<h2>Subatomic</h2>
+
+<p>Subatomic elements are the foundational design tokens and primitives that form the basis of our design system. These include colors, typography, spacing, and other fundamental design decisions.</p>
+
+<div class="component-grid">
+  {% for component in collections.docs_subatomic %}
+    {% if not component.fileSlug.includes('index') %}
+    <div class="component-card">
+      <h3><a href="{{ component.url }}">{{ component.data.title }}</a></h3>
+      <p>{{ component.data.description }}</p>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div> 

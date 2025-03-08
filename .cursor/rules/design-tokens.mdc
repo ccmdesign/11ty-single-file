@@ -1,0 +1,130 @@
+---
+description: 
+globs: .njk, .css, .html, .vue, .scss
+alwaysApply: false
+---
+## Brad Frost's Three-Tier Design Token System for AI Coding
+
+### Introduction
+
+Design tokens are the essential building blocks of a design system, encapsulating visual attributes such as colors, typography, and spacing. They ensure a unified look and feel across products and platforms while supporting scalability and adaptability. This documentation outlines an implementation of Brad Frost's three-tier design token system—Definition Tokens, UI Application Tokens, and Component Variables—tailored for an AI coding system. This structured approach enhances automation, maintains consistency, and allows for customization, making it ideal for technical and design teams managing complex, multi-platform projects.
+
+---
+
+### Tier 1: Definition Tokens
+
+**Definition**: Definition tokens represent the raw, foundational design values that establish a brand’s visual identity. These include colors, font families, sizes, spacing units, and other core properties.
+
+**Purpose**: These tokens act as the single source of truth, ensuring that all visual elements derive from a consistent base. Updates to these tokens cascade through the system, maintaining uniformity.
+
+**Examples**:
+- `color-primary: #00704a` (brand’s primary green)
+- `font-family-default: 'Roboto', sans-serif`
+- `spacing-small: 8px`
+
+**Implementation**:
+- Store these tokens in a centralized configuration file, accessible to both design and development teams. For example, in CSS:
+  ```css
+  :root {
+    --color-primary: #00704a;
+    --font-family-default: 'Roboto', sans-serif;
+    --spacing-small: 8px;
+  }
+  ```
+- Alternatively, manage them in a design tool like Figma, exporting them for use in code.
+
+---
+
+### Tier 2: UI Application Tokens
+
+**Definition**: UI application tokens apply Tier 1 values to specific user interface elements, such as buttons, headings, or input fields. They bridge raw design values and practical UI application.
+
+**Purpose**: By linking Tier 1 tokens to UI components, these tokens enable global updates with minimal effort. For instance, updating `color-primary` automatically refreshes all elements referencing `button-background-color`.
+
+**Examples**:
+- `button-background-color: var(--color-primary)`
+- `heading-font-family: var(--font-family-default)`
+- `padding-small: var(--spacing-small)`
+
+**Implementation**:
+- Extend the centralized configuration to define UI-specific tokens that reference Tier 1 values. In CSS:
+  ```css
+  :root {
+    --button-background-color: var(--color-primary);
+    --heading-font-family: var(--font-family-default);
+    --padding-small: var(--spacing-small);
+  }
+  ```
+- Apply these tokens in component styles, e.g.:
+  ```css
+  button {
+    background-color: var(--button-background-color);
+    padding: var(--padding-small);
+  }
+  ```
+
+---
+
+### Tier 3: Component Variables
+
+**Definition**: Component variables are customizable properties exposed by individual components. They default to Tier 2 tokens but can be overridden for specific instances.
+
+**Purpose**: These variables provide flexibility, allowing teams to tailor components for unique use cases while preserving global consistency.
+
+**Examples**:
+- A button component might define:
+  - `--_button-background-color: var(--button-background-color)` (default)
+- For a specific instance, override it:
+  - `<button style="--_button-background-color: #ff0000;">Danger Button</button>`
+
+**Implementation**:
+- Define variables within component styles, referencing Tier 2 tokens by default. In CSS:
+  ```css
+  .btn {
+    --_button-background-color: var(--button-background-color);
+    --_button-padding-block: var(--button-padding-block);
+    --_button-padding-inline: var(--button-padding-inline);
+
+    background-color: var(--_button-background-color);
+    padding-block: var(--_button-padding-block);
+    padding-inline: var(--_button-padding-inline);
+  }
+
+  ```
+- Allow overrides in HTML:
+  ```html
+  <button class="button" style="--background-color: #ff0000;">
+    Danger Button
+  </button>
+  ```
+
+---
+
+### Implementation in AI Coding Systems
+
+Integrating this three-tier system into an AI coding environment streamlines design-to-code workflows. Here’s how it works:
+
+- **Token Management**:
+  - The AI parses Tier 1 tokens from design specifications (e.g., Figma files or JSON exports) and stores them centrally.
+  - It generates Tier 2 tokens by analyzing UI component requirements, mapping them to Tier 1 values.
+
+- **Automation**:
+  - Automate Tier 2 token creation by identifying recurring design patterns (e.g., all buttons use `color-primary` for backgrounds).
+  - Propagate Tier 1 updates to Tier 2 tokens, ensuring real-time consistency across the codebase.
+
+- **Customization Support**:
+  - Expose Tier 3 variables in generated components, enabling developers to override defaults via inline styles or configuration files.
+  - Validate overrides using AI-driven checks for accessibility (e.g., contrast ratios) and design compliance.
+
+- **Documentation Generation**:
+  - Automatically produce documentation for all tiers, including token definitions, usage examples, and override guidelines.
+  - Example output:
+    - **Token**: `--color-primary: #00704a`
+    - **Used in**: `--button-background-color`
+    - **Override Example**: `style="--_button-background-color: #ff0000;"`
+
+---
+
+### Conclusion
+
+Brad Frost’s three-tier design token system—Definition Tokens, UI Application Tokens, and Component Variables—offers a powerful framework for AI coding systems. It ensures a consistent visual language, automates design implementation, and supports component-level customization. By adopting this approach, organizations can build scalable, maintainable design systems that reduce redundancy, enhance collaboration between design and development teams, and adapt to diverse product needs. This system empowers AI to bridge the gap between design intent and code execution, delivering efficient and high-quality outcomes.

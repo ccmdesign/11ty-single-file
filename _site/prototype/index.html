@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype | Style Guide</title>
+  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- Component styles -->
+  
+  
+  <!-- Additional styles -->
+  
+</head>
+<body>
+  <!-- Top navigation bar -->
+  <header class="topbar">
+    <div class="container topbar-container">
+      <a href="/" class="topbar-logo">Style Guide</a>
+      <nav class="topbar-nav">
+        <a href="/" class="topbar-nav-item ">Home</a>
+        <a href="/docs/" class="topbar-nav-item ">Documentation</a>
+        <a href="/prototype/" class="topbar-nav-item active">Prototype</a>
+      </nav>
+      <button class="topbar-menu-toggle" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    
+<div class="prototype-container">
+  <h1>Prototype</h1>
+
+  <p>This section will contain interactive prototypes and example pages showcasing our components in real-world contexts.</p>
+
+  <div class="prototype-message">
+    <h3>Coming Soon</h3>
+    <p>We're currently working on building out our prototype examples. Check back soon for updates!</p>
+  </div>
+</div> 
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Style Guide</p>
+    </div>
+  </footer>
+  
+  <!-- Mobile menu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.topbar-menu-toggle');
+      const topbarNav = document.querySelector('.topbar-nav');
+      
+      if (menuToggle && topbarNav) {
+        menuToggle.addEventListener('click', function() {
+          topbarNav.classList.toggle('open');
+        });
+      }
+    });
+  </script>
+  
+  <!-- Component scripts -->
+  
+  
+  <!-- Additional scripts -->
+  
+</body>
+</html> 

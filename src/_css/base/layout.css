@@ -1,0 +1,63 @@
+/* Base layout styles */
+
+:root {
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+  
+  --grid-columns: 12;
+  --grid-gap: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Simple grid system */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--grid-gap) / 2);
+  margin-right: calc(-1 * var(--grid-gap) / 2);
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-left: calc(var(--grid-gap) / 2);
+  padding-right: calc(var(--grid-gap) / 2);
+}
+
+/* Basic responsive layout utilities */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-max-width);
+  }
+} 

@@ -1,0 +1,172 @@
+---
+layout: docs-layout.njk
+title: Button
+description: Buttons are used to trigger actions or events.
+component: components/atoms/button
+---
+
+<h2>Button</h2>
+
+<p class="component-description">Buttons are used to trigger actions or events.</p>
+
+<div class="component-demo">
+  <div class="component-demo-preview">
+    <button class="btn">Default Button</button>
+  </div>
+  
+  <div class="component-demo-code">
+    <pre><code class="language-html">&lt;button class="btn"&gt;Default Button&lt;/button&gt;</code></pre>
+  </div>
+</div>
+
+<h3>Usage</h3>
+<div class="component-usage">
+  <p>Buttons are used to trigger actions or events, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.</p>
+
+  <h4>When to use</h4>
+  <ul>
+    <li>Use buttons to trigger an action or event.</li>
+    <li>Use links to navigate to a different page or location within the page.</li>
+  </ul>
+
+  <h4>Implementation</h4>
+
+  <pre><code class="language-html">&lt;button class="btn"&gt;Button Text&lt;/button&gt;</code></pre>
+
+  <h4>Available modifiers</h4>
+  <ul>
+    <li><code>btn-secondary</code>: Secondary button style</li>
+    <li><code>btn-outline</code>: Outline button style</li>
+    <li><code>btn-danger</code>: Danger/delete button style</li>
+    <li><code>btn-success</code>: Success/confirm button style</li>
+    <li><code>btn-sm</code>: Small button</li>
+    <li><code>btn-lg</code>: Large button</li>
+    <li><code>btn-block</code>: Full-width button</li>
+  </ul>
+
+  <h4>Parameters</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>text</code></td>
+        <td>String</td>
+        <td>The button text (required)</td>
+      </tr>
+      <tr>
+        <td><code>modifier</code></td>
+        <td>String</td>
+        <td>CSS class modifiers (optional)</td>
+      </tr>
+      <tr>
+        <td><code>disabled</code></td>
+        <td>Boolean</td>
+        <td>Whether the button is disabled (optional)</td>
+      </tr>
+      <tr>
+        <td><code>type</code></td>
+        <td>String</td>
+        <td>Button type attribute (default: "button")</td>
+      </tr>
+      <tr>
+        <td><code>iconLeft</code></td>
+        <td>HTML</td>
+        <td>Icon to display before text (optional)</td>
+      </tr>
+      <tr>
+        <td><code>iconRight</code></td>
+        <td>HTML</td>
+        <td>Icon to display after text (optional)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Variations</h3>
+<div class="component-variations">
+  <h4>Secondary Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-secondary">Secondary Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Outline Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-outline">Outline Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-outline"&gt;Outline Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Danger Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-danger">Danger Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-danger"&gt;Danger Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Success Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-success">Success Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-success"&gt;Success Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Small Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-sm">Small Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-sm"&gt;Small Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Large Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-lg">Large Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-lg"&gt;Large Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Disabled Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn" disabled>Disabled Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn" disabled&gt;Disabled Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+  
+  <h4>Full Width Button</h4>
+  <div class="component-demo">
+    <div class="component-demo-preview">
+      <button class="btn btn-block">Full Width Button</button>
+    </div>
+    <div class="component-demo-code">
+      <pre><code class="language-html">&lt;button class="btn btn-block"&gt;Full Width Button&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+</div> 

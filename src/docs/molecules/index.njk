@@ -1,0 +1,19 @@
+---
+layout: docs-layout.njk
+title: Molecules
+---
+
+<h2>Molecules</h2>
+
+<p>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.</p>
+
+<div class="component-grid">
+  {% for component in collections.docs_molecules %}
+    {% if not component.fileSlug.includes('index') %}
+    <div class="component-card">
+      <h3><a href="{{ component.url }}">{{ component.data.title }}</a></h3>
+      <p>{{ component.data.description }}</p>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

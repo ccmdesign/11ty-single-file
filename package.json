@@ -1,0 +1,34 @@
+{
+  "name": "11ty-single-file",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build-css.js && npm-run-all --parallel dev:*",
+    "dev:eleventy": "eleventy --serve --watch --quiet --incremental --port=8080",
+    "dev:css": "postcss src/_css/main.css -o _site/css/main.css --watch --verbose",
+    "build": "npm-run-all build:*",
+    "build:eleventy": "ELEVENTY_ENV=production eleventy",
+    "build:css": "NODE_ENV=production postcss src/_css/main.css -o _site/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "postcss-extend-rule": "^4.0.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}

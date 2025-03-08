@@ -1,0 +1,43 @@
+---
+layout: layout.njk
+---
+
+<h2>{{ title }}</h2>
+
+{% if description %}
+  <p class="component-description">{{ description }}</p>
+{% endif %}
+
+<div class="component-demo">
+  <div class="component-demo-preview">
+    {{ content | safe }}
+  </div>
+  
+  <div class="component-demo-code">
+    <pre><code class="language-html">{{ content | escape }}</code></pre>
+  </div>
+</div>
+
+{% if usage %}
+  <h3>Usage</h3>
+  <div class="component-usage">
+    {{ usage | safe }}
+  </div>
+{% endif %}
+
+{% if variations %}
+  <h3>Variations</h3>
+  <div class="component-variations">
+    {% for variation in variations %}
+      <h4>{{ variation.title }}</h4>
+      <div class="component-demo">
+        <div class="component-demo-preview">
+          {{ variation.content | safe }}
+        </div>
+        <div class="component-demo-code">
+          <pre><code class="language-html">{{ variation.content | escape }}</code></pre>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %} 
