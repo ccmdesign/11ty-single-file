@@ -1,0 +1,38 @@
+{% set defaultTitle = "Style Guide" %}
+{% set defaultSections = [
+  { title: "Home", url: "/", active: false },
+  { title: "Docs", url: "/docs/", active: false },
+  { title: "Prototype", url: "/prototype/", active: false },
+  { title: "Dev", url: "/dev/", active: false }
+] %}
+
+{% set navTitle = styleguideTitle | default(title) | default(defaultTitle) %}
+{% set navSections = styleguideNavSections | default(sections) | default(defaultSections) %}
+
+<nav class="styleguide-top-nav">
+  <div class="styleguide-top-nav-container">
+    <a href="/docs/" class="styleguide-top-nav-logo">{{ navTitle }}</a>
+    
+    <div class="styleguide-top-nav-links">
+      {% for section in navSections %}
+        <a href="{{ section.url }}" class="styleguide-top-nav-item {% if section.active or page.url == section.url %}active{% endif %}">
+          {{ section.title }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Toggle mobile menu
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.styleguide-top-nav-toggle');
+    const navLinks = document.querySelector('.styleguide-top-nav-links');
+    
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script> 

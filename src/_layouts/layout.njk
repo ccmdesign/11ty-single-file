@@ -22,23 +22,10 @@
 </head>
 <body>
   <!-- Top navigation bar -->
-  <header class="topbar">
-    <div class="container topbar-container">
-      <a href="/" class="topbar-logo">Style Guide</a>
-      <nav class="topbar-nav">
-        <a href="/" class="topbar-nav-item {% if page.url == '/' %}active{% endif %}">Home</a>
-        <a href="/docs/" class="topbar-nav-item {% if page.url.startsWith('/docs/') %}active{% endif %}">Documentation</a>
-        <a href="/prototype/" class="topbar-nav-item {% if page.url.startsWith('/prototype/') %}active{% endif %}">Prototype</a>
-      </nav>
-      <button class="topbar-menu-toggle" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-  </header>
+  {% set styleguideTitle = "Style Guide" %}
+  
+  {% include "styleguide/top-nav.njk" %}
+
 
   <main>
     {{ content | safe }}

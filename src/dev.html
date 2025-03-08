@@ -1,0 +1,121 @@
+---
+layout: layout.njk
+title: Style Guide
+---
+
+<section>
+
+  <p>All Components</p>
+  <ul>
+    {% for item in collections.components %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+<h4>Component Type Collections</h4>
+<div class="collection-section">
+  <p>Subatomic Components</p>
+  <ul>
+    {% for item in collections.subatomic %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Atoms</p>
+  <ul>
+    {% for item in collections.atoms %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Molecules</p>
+  <ul>
+    {% for item in collections.molecules %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Organisms</p>
+  <ul>
+    {% for item in collections.organisms %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Templates</p>
+  <ul>
+    {% for item in collections.templates %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h4>Documentation Collections</h4>
+<div class="collection-section">
+  <p>Subatomic Docs</p>
+  <ul>
+    {% for item in collections.docs_subatomic %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Atoms Docs</p>
+  <ul>
+    {% for item in collections.docs_atoms %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Molecules Docs</p>
+  <ul>
+    {% for item in collections.docs_molecules %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Organisms Docs</p>
+  <ul>
+    {% for item in collections.docs_organisms %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Templates Docs</p>
+  <ul>
+    {% for item in collections.docs_templates %}
+      <li>{{ item.inputPath }} - {{ item.url }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h4>All Collections</h4>
+<div class="collection-section">
+  <p>All Available Collections</p>
+  <ul>
+    {% for collectionName, collection in collections %}
+      <li>
+        <strong>{{ collectionName }}</strong> ({{ collection.length }} items)
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<style>
+  .collection-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+  
+  .collection-section p {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .collection-section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+</style>
+</section>

@@ -25,7 +25,6 @@
 {% set navCategories = categories | default(defaultCategories) %}
 
 <nav class="styleguide-nav">
-  <h3>{{ navTitle }}</h3>
   
   {% for category in navCategories %}
     <details {% if category.defaultOpen %}open{% endif %}>
