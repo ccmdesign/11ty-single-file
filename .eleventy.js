@@ -11,9 +11,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/_includes/**/*.js");
   eleventyConfig.addWatchTarget("src/_css/**/*.css");
   
-  // Process CSS files from _includes structure
+  // Process JS files from _includes structure, but not CSS files
   eleventyConfig.addPassthroughCopy({
-    "src/_includes/**/*.css": "css",
     "src/_includes/**/*.js": "js"
   });
   
@@ -23,17 +22,16 @@ module.exports = function(eleventyConfig) {
     outputFileExtension: "css",
     // This will be called for any CSS file in the src directory
     compile: function(inputContent, inputPath) {
-      // Skip processing CSS files that are in the _css directory
-      // as they will be processed by PostCSS
-      if (inputPath.includes("/_css/")) {
-        return;
-      }
-      
-      // For other CSS files, just pass them through
-      return function(data) {
-        return inputContent;
-      };
+      // Skip processing all CSS files - we'll handle them with PostCSS
+      // This prevents individual CSS files from being copied to the output
+      return;
     }
+  });
+  
+  // Add a filter to filter out index files from collections
+  eleventyConfig.addFilter("filterOutIndex", function(collection) {
+    if (!collection || !collection.length) return [];
+    return collection.filter(item => !item.fileSlug.includes('index'));
   });
   
   // Create collections for components
@@ -57,7 +55,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("componentCSS", function(componentPath) {
     const cssPath = path.join(__dirname, "src", "_includes", componentPath + ".css");
     if (fs.existsSync(cssPath)) {
-      return `<link rel="stylesheet" href="/css/${componentPath}.css">`;
+      // Instead of linking to individual CSS files, we'll just note that they exist
+      // All component CSS should be imported into main.css
+      return `<!-- Component CSS for ${componentPath} is included in main.css -->`;
     }
     return "";
   });

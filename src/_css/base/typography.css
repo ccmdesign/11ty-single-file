@@ -24,7 +24,7 @@
   .h5,
   h6,
   .h6 {
-    font-family: var(--body-font, "Helvetica Neue", sans-serif);
+    font-family: var(--body-font, sans-serif);
     margin-block: 0;
   }
 

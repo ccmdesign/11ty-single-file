@@ -1,0 +1,27 @@
+{# 
+  Component Grid
+  
+  Parameters:
+  - components: Array of component objects to display
+  - emptyMessage: Message to display when there are no components (default: "No components found.")
+#}
+
+{% set defaultEmptyMessage = "No components found." %}
+{% set gridEmptyMessage = emptyMessage | default(defaultEmptyMessage) %}
+
+<div class="component-grid">
+  {% if components and components.length > 0 %}
+    {% for component in components %}
+      <div class="component-card">
+        <h3>
+          <a href="{{ component.url }}">{{ component.data.title }}</a>
+        </h3>
+        {% if component.data.description %}
+        <p>{{ component.data.description }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>{{ gridEmptyMessage }}</p>
+  {% endif %}
+</div> 

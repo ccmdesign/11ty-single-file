@@ -11,7 +11,7 @@ layout: docs-layout.njk
     {% endif %}
     
     {% if metadata.status %}
-      <div class="component-status status-{{ metadata.status | lower }}">
+      <div class="component-status">
         <span class="status-label">Status:</span> {{ metadata.status }}
       </div>
     {% endif %}
@@ -40,7 +40,7 @@ layout: docs-layout.njk
             <p>{{ example.description }}</p>
           {% endif %}
           
-          <div class="component-demo">
+          <div>
             <div class="component-demo-preview">
               {{ example.rendered | safe }}
             </div>
@@ -117,4 +117,4 @@ layout: docs-layout.njk
   <script>
     {{ metadata.scripts | safe }}
   </script>
-{% endif %} 
+{% endif %}

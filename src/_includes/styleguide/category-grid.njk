@@ -1,0 +1,20 @@
+{# 
+  Category Grid
+  
+  Parameters:
+  - categories: Array of category objects with the following properties:
+    - title: The display title
+    - url: The URL for the category
+    - description: The description of the category
+#}
+
+<div class="docs-category-grid">
+  {% for category in categories %}
+    <a href="{{ category.url }}">
+      <div class="docs-category-card">
+        <h3>{{ category.title }}</h3>
+        <p>{{ category.description }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div> 

@@ -1,0 +1,15 @@
+---
+layout: docs-layout.njk
+---
+
+<h2 class="component-index-title">{{ title }}</h2>
+
+{% if description %}
+<p class="component-index-description">{{ description }}</p>
+{% endif %}
+
+{% set collectionName = "docs_" + category | lower %}
+{% set componentsList = collections[collectionName] | filterOutIndex %}
+{% set components = componentsList %}
+
+{% include "styleguide/component-grid.njk" %} 

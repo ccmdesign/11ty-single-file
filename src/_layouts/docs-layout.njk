@@ -4,59 +4,15 @@ layout: layout.njk
 
 <div class="styleguide-container">
   <aside class="styleguide-sidebar">
-    <nav class="styleguide-nav">
-      <h3>Components</h3>
-      
-      <div class="styleguide-nav-section">
-        <h4><a href="/docs/subatomic/">Subatomic</a></h4>
-        <ul>
-          {%- set subatomicPages = collections.all | eleventyNavigation("Subatomic") -%}
-          {%- for entry in subatomicPages %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
-      
-      <div class="styleguide-nav-section">
-        <h4><a href="/docs/atoms/">Atoms</a></h4>
-        <ul>
-          {%- set atomPages = collections.all | eleventyNavigation("Atoms") -%}
-          {%- for entry in atomPages %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
-      
-      <div class="styleguide-nav-section">
-        <h4><a href="/docs/molecules/">Molecules</a></h4>
-        <ul>
-          {%- set moleculePages = collections.all | eleventyNavigation("Molecules") -%}
-          {%- for entry in moleculePages %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
-      
-      <div class="styleguide-nav-section">
-        <h4><a href="/docs/organisms/">Organisms</a></h4>
-        <ul>
-          {%- set organismPages = collections.all | eleventyNavigation("Organisms") -%}
-          {%- for entry in organismPages %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
-      
-      <div class="styleguide-nav-section">
-        <h4><a href="/docs/templates/">Templates</a></h4>
-        <ul>
-          {%- set templatePages = collections.all | eleventyNavigation("Templates") -%}
-          {%- for entry in templatePages %}
-            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
-    </nav>
+    {% set navTitle = "Component Library" %}
+    {% set navCategories = [
+      { key: "Subatomic", title: "Subatomic", url: "/docs/subatomic/", defaultOpen: false },
+      { key: "Atoms", title: "Atoms", url: "/docs/atoms/", defaultOpen: false },
+      { key: "Molecules", title: "Molecules", url: "/docs/molecules/", defaultOpen: false },
+      { key: "Organisms", title: "Organisms", url: "/docs/organisms/", defaultOpen: false },
+      { key: "Templates", title: "Templates", url: "/docs/templates/", defaultOpen: false }
+    ] %}
+    {% include "styleguide/navigation.njk" %}
   </aside>
   
   <main class="styleguide-content">

@@ -3,11 +3,11 @@
 /* Import base styles */
 @import-glob "base/*.css";
 
-/* Import component styles */
-@import-glob "components/*.css";
-
 /* Import utility styles */
 @import-glob "utilities/*.css";
 
 /* Import style guide styles */
-@import 'styleguide.css'; 
+@import 'styleguide.css';
+
+/* Import component CSS from _includes directory */
+@import-glob "../_includes/components/**/*.css"; 

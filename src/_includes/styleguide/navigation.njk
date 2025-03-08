@@ -1,0 +1,60 @@
+{# 
+  Styleguide Navigation Component
+  
+  Parameters:
+  - title: The title of the navigation (default: "Components")
+  - categories: Array of category objects with the following properties:
+    - key: The key for eleventyNavigation
+    - title: The display title
+    - url: The URL for the category
+    - defaultOpen: Whether the category should be open by default (default: false)
+  
+  If no categories are provided, the default categories will be used.
+#}
+
+{% set defaultTitle = "Components" %}
+{% set defaultCategories = [
+  { key: "Subatomic", title: "Subatomic", url: "/docs/subatomic/", defaultOpen: true },
+  { key: "Atoms", title: "Atoms", url: "/docs/atoms/", defaultOpen: false },
+  { key: "Molecules", title: "Molecules", url: "/docs/molecules/", defaultOpen: false },
+  { key: "Organisms", title: "Organisms", url: "/docs/organisms/", defaultOpen: false },
+  { key: "Templates", title: "Templates", url: "/docs/templates/", defaultOpen: false }
+] %}
+
+{% set navTitle = title | default(defaultTitle) %}
+{% set navCategories = categories | default(defaultCategories) %}
+
+<nav class="styleguide-nav">
+  <h3>{{ navTitle }}</h3>
+  
+  {% for category in navCategories %}
+    <details {% if category.defaultOpen %}open{% endif %}>
+      <summary>
+        <a href="{{ category.url }}">{{ category.title }}</a>
+      </summary>
+      <ul>
+        {%- set categoryPages = collections.all | eleventyNavigation(category.key) -%}
+        {%- for entry in categoryPages %}
+          <li>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+    </details>
+  {% endfor %}
+</nav>
+
+<script>
+  // Auto-expand the current section based on URL
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const details = document.querySelectorAll('.styleguide-nav details');
+    
+    details.forEach(detail => {
+      const summaryLink = detail.querySelector('summary a');
+      if (summaryLink && currentPath.includes(summaryLink.getAttribute('href'))) {
+        detail.open = true;
+      }
+    });
+  });
+</script> 
