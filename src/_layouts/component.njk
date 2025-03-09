@@ -118,3 +118,13 @@ layout: docs-layout.njk
     {{ metadata.scripts | safe }}
   </script>
 {% endif %}
+
+<script>
+  // Initialize Prism.js for any code blocks that might be in the content
+  document.addEventListener('DOMContentLoaded', function() {
+    // Force Prism to highlight all code blocks
+    if (typeof Prism !== 'undefined') {
+      Prism.highlightAll();
+    }
+  });
+</script>

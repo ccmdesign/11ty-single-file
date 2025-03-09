@@ -384,3 +384,39 @@
 .swatch[style*="--navy-color"] + .swatch-info {
   border-top: none;
 }
+
+/* Code block styling enhancements */
+pre[class*="language-"] {
+  margin: 1.5em 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+code[class*="language-"] {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.component-demo-code {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.component-demo-preview {
+  padding: 1.5rem;
+  border: 1px solid var(--base-color-200, #eee);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+/* Inline code styling */
+:not(pre) > code {
+  background-color: var(--base-color-100, #f5f5f5);
+  color: var(--accent-color, #e83e8c);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+  white-space: nowrap;
+}

@@ -24,7 +24,7 @@ input::file-selector-button,
 
   /* Optional Values */
   --_button-border-radius: var(--border-radius-s); /* Fallback to 0 */
-  --_button-border-color: color-mix(in srgb, var(--_button-color) 20%, white);
+  --_button-border-color: var(--border-default);
   --_button-border-width: 1px; /* Fallback to 1px */
   --_button-border-style: var(--base-border-style, solid); /* Fallback to solid */
   --_button-font-weight: var(--font-weight, 400); /* Fallback to 400 */
@@ -59,6 +59,8 @@ input::file-selector-button,
 
 .button:focus {
   outline: 0;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+  border-color: var(--border-focus);
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -71,6 +73,9 @@ input::file-selector-button,
 .button[disabled]:hover,
 .button[disabled]:focus,
 .button[disabled]:active {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text);
+  border-color: var(--button-disabled-border);
   filter: alpha(opacity=40);
   opacity: 0.4;
   cursor: not-allowed;
@@ -99,45 +104,45 @@ input::file-selector-button,
 
 .button[data-color="base"] {
   --_button-hsl: var(--base-hsl);
-  --_button-text-color: var(--base-color);
+  --_button-text-color: var(--text-default);
 }
 
 .button[data-color="primary"] {
   --_button-hsl: var(--primary-hsl);
-  --_button-text-color: var(--primary-color);
+  --_button-text-color: var(--button-primary-text);
 }
 
 .button[data-color="secondary"] {
   --_button-hsl: var(--secondary-hsl);
-  --_button-text-color: var(--secondary-color);
+  --_button-text-color: var(--button-secondary-text);
 }
 
 .button[data-color="accent"] {
   --_button-hsl: var(--accent-hsl);
-  --_button-text-color: var(--accent-color);
+  --_button-text-color: var(--accent-default);
 }
 
 .button[data-color="white"] {
   --_button-hsl: var(--white-hsl);
-  --_button-text-color: var(--white-color);
+  --_button-text-color: var(--text-inverse);
 }
 
 .button[data-color="success"] {
   --_button-hsl: var(--success-hsl);
-  --_button-text-color: var(--success-color);
+  --_button-text-color: var(--status-success-text);
 }
 
 .button[data-color="error"],
 .button[data-color="cancel"],
 .button[data-color="fail"] {
   --_button-hsl: var(--red-hsl);
-  --_button-text-color: var(--red-color);
+  --_button-text-color: var(--status-error-text);
 }
 
 .button[data-color="warning"],
 .button[color="warning"] {
   --_button-hsl: var(--yellow-hsl);
-  --_button-text-color: var(--yellow-color);
+  --_button-text-color: var(--status-warning-text);
 }
 
 .button[data-size="s"],
@@ -184,52 +189,125 @@ input::file-selector-button,
 
 input::file-selector-button:hover,
 .button:hover {
-  background-image: linear-gradient(hsla(var(--_button-hsl), 0.05), hsla(var(--_button-hsl), 0.05));
+  background-image: none;
+  background-color: var(--button-ghost-hover-bg);
+  color: var(--button-ghost-hover-text);
+  border-color: var(--button-ghost-hover-border);
 }
 
 input::file-selector-button:active,
 .button:active {
-  background-image: linear-gradient(hsla(var(--_button-hsl), 0.15), hsla(var(--_button-hsl), 0.15));
-  border-color: hsla(var(--_button-color), 1);
+  background-image: none;
+  background-color: var(--button-ghost-active-bg);
+  color: var(--button-ghost-active-text);
+  border-color: var(--button-ghost-active-border);
 }
 
 .button[data-visual="primary"],
 .button[visual="primary"],
 /* This makes the checkbox checked look like the primary button */
 .button:has(:checked) {
-  color: white;
+  color: var(--button-primary-text);
   border-width: var(--_button-border-width, 0);
   border-style: var(--_button-border-style, solid);
-  border-color: hsla(var(--_button-hsl), 1);
-  background-color: hsla(var(--_button-hsl), 1);
+  border-color: var(--button-primary-border);
+  background-color: var(--button-primary-bg);
 }
 
 .button[data-visual="primary"]:hover,
 .button[data-visual="primary"]:focus,
 .button[visual="primary"]:hover,
 .button[visual="primary"]:focus {
-  background-image: linear-gradient(hsla(0, 0%, 0%, 0.15), hsla(0, 0%, 0%, 0.25));
+  background-color: var(--button-primary-hover-bg);
+  border-color: var(--button-primary-hover-border);
+  color: var(--button-primary-hover-text);
+}
+
+.button[data-visual="primary"]:active,
+.button[visual="primary"]:active {
+  background-color: var(--button-primary-active-bg);
+  border-color: var(--button-primary-active-border);
+  color: var(--button-primary-active-text);
 }
 
 .button[data-visual="secondary"],
 .button[visual="secondary"] {
-  background-color: transparent;
-  color: var(--_button-text-color);
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
   border-width: var(--_button-border-width, 1px);
   border-style: var(--_button-border-style, solid);
-  border-color: hsla(var(--_button-hsl), 1);
+  border-color: var(--button-secondary-border);
 }
 
 .button[data-visual="secondary"]:hover,
 .button[data-visual="secondary"]:focus,
 .button[visual="secondary"]:hover,
 .button[visual="secondary"]:focus {
-  background-image: linear-gradient(hsla(var(--_button-hsl), 0.1), hsla(var(--_button-hsl), 0.1));
+  background-color: var(--button-secondary-hover-bg);
+  border-color: var(--button-secondary-hover-border);
+  color: var(--button-secondary-hover-text);
+}
+
+.button[data-visual="secondary"]:active,
+.button[visual="secondary"]:active {
+  background-color: var(--button-secondary-active-bg);
+  border-color: var(--button-secondary-active-border);
+  color: var(--button-secondary-active-text);
+}
+
+.button[data-visual="tertiary"],
+.button[visual="tertiary"] {
+  background-color: var(--button-tertiary-bg);
+  color: var(--button-tertiary-text);
+  border-width: var(--_button-border-width, 1px);
+  border-style: var(--_button-border-style, solid);
+  border-color: var(--button-tertiary-border);
+}
+
+.button[data-visual="tertiary"]:hover,
+.button[data-visual="tertiary"]:focus,
+.button[visual="tertiary"]:hover,
+.button[visual="tertiary"]:focus {
+  background-color: var(--button-tertiary-hover-bg);
+  border-color: var(--button-tertiary-hover-border);
+  color: var(--button-tertiary-hover-text);
+}
+
+.button[data-visual="tertiary"]:active,
+.button[visual="tertiary"]:active {
+  background-color: var(--button-tertiary-active-bg);
+  border-color: var(--button-tertiary-active-border);
+  color: var(--button-tertiary-active-text);
+}
+
+.button[data-visual="ghost"],
+.button[visual="ghost"] {
+  background-color: var(--button-ghost-bg);
+  color: var(--button-ghost-text);
+  border-width: var(--_button-border-width, 0);
+  border-style: var(--_button-border-style, solid);
+  border-color: var(--button-ghost-border);
+}
+
+.button[data-visual="ghost"]:hover,
+.button[data-visual="ghost"]:focus,
+.button[visual="ghost"]:hover,
+.button[visual="ghost"]:focus {
+  background-color: var(--button-ghost-hover-bg);
+  border-color: var(--button-ghost-hover-border);
+  color: var(--button-ghost-hover-text);
+}
+
+.button[data-visual="ghost"]:active,
+.button[visual="ghost"]:active {
+  background-color: var(--button-ghost-active-bg);
+  border-color: var(--button-ghost-active-border);
+  color: var(--button-ghost-active-text);
 }
 
 .button[data-visual="unstyled"],
 .button[visual="unstyled"] {
-  color: hsla(var(--_button-hsl), 1);
+  color: var(--text-default);
   border-width: var(--_button-border-width, 0);
   border-style: var(--_button-border-style, solid);
   border-color: transparent;
@@ -314,10 +392,39 @@ input::file-selector-button:active,
 }
 
 .button[data-visual="primary"][data-icon-before]:before,
-.button[visual="primary"][icon-before]:before,
 .button[data-visual="primary"][data-icon-after]:after,
-.button[visual="primary"][icon-after]:after {
-  --_button-icon-color: var(--white-color);
+.button[data-visual="primary"][data-icon]:before,
+.button[visual="primary"][data-icon-before]:before,
+.button[visual="primary"][data-icon-after]:after,
+.button[visual="primary"][data-icon]:before {
+  color: var(--button-primary-text);
+}
+
+.button[data-visual="secondary"][data-icon-before]:before,
+.button[data-visual="secondary"][data-icon-after]:after,
+.button[data-visual="secondary"][data-icon]:before,
+.button[visual="secondary"][data-icon-before]:before,
+.button[visual="secondary"][data-icon-after]:after,
+.button[visual="secondary"][data-icon]:before {
+  color: var(--button-secondary-text);
+}
+
+.button[data-visual="tertiary"][data-icon-before]:before,
+.button[data-visual="tertiary"][data-icon-after]:after,
+.button[data-visual="tertiary"][data-icon]:before,
+.button[visual="tertiary"][data-icon-before]:before,
+.button[visual="tertiary"][data-icon-after]:after,
+.button[visual="tertiary"][data-icon]:before {
+  color: var(--button-tertiary-text);
+}
+
+.button[data-visual="ghost"][data-icon-before]:before,
+.button[data-visual="ghost"][data-icon-after]:after,
+.button[data-visual="ghost"][data-icon]:before,
+.button[visual="ghost"][data-icon-before]:before,
+.button[visual="ghost"][data-icon-after]:after,
+.button[visual="ghost"][data-icon]:before {
+  color: var(--button-ghost-text);
 }
 
 .button.icon {
@@ -344,4 +451,10 @@ input::file-selector-button:active,
 .button[data-icon-before][data-full-width="true"],
 .button[data-icon-after][data-full-width="true"] {
   gap: var(--size-1);
+}
+
+.button[data-icon-before]:before,
+.button[data-icon-after]:after,
+.button[data-icon]:before {
+  color: var(--_button-icon-color);
 }
