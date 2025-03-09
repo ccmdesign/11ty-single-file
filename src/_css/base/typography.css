@@ -1,6 +1,6 @@
 @layer typography {
   :root {
-    font-family: var(--body-font);
+    font-family: var(--font-body);
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -24,43 +24,43 @@
   .h5,
   h6,
   .h6 {
-    font-family: var(--body-font, sans-serif);
+    font-family: var(--font-body, sans-serif);
     margin-block: 0;
   }
 
   h1,
   .h1 {
-    font-size: var(--size-4);
-    font-weight: 300;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-light);
   }
   h2,
   .h2 {
-    font-size: var(--size-3);
-    font-weight: 300;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
   }
   h3,
   .h3 {
-    font-size: var(--size-2);
-    font-weight: 500;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-normal);
   }
   h4,
   .h4 {
-    font-size: var(--size-1);
-    font-weight: 500;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-normal);
   }
   h5,
   .h5 {
-    font-size: var(--size-0);
-    font-weight: 500;
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-normal);
   }
   h6,
   .h6 {
-    font-size: var(--size-0);
-    font-weight: 500;
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-normal);
   }
 
   p, dl {
-    font-size: var(--size-0);
+    font-size: var(--font-size-0);
   }
 
   a:not([class]) {
@@ -80,13 +80,13 @@
   }
 
   li {
-    margin-bottom: 0.5em;
+    margin-bottom: var(--space-xs);
   }
 
   blockquote {
     margin: 0;
-    padding: 0 var(--base-padding-inline);
-    color: var(--base-color, #666);
+    padding: 0 var(--padding-inline);
+    color: var(--color-base-100);
     border-left: 0;
   }
 
@@ -94,11 +94,11 @@
   input,
   button,
   a {
-    font-weight: 100;
+    font-weight: var(--font-weight-light);
   }
 
   strong {
-    font-weight: 400;
+    font-weight: var(--font-weight-semibold);
   }
 }
 

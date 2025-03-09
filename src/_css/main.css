@@ -10,3 +10,5 @@
 @import-glob "../_includes/components/**/**/*.css";
 
 /* Note: styleguide.css is loaded separately in the layout */ 
+
+@layer layout, base, typography, components, utilities;

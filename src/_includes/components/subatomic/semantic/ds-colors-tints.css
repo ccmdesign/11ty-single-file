@@ -1,0 +1,377 @@
+:root {
+  /* Base color - Material Design style */
+  --color-base-500: var(--color-base); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-base-50: color-mix(in srgb, var(--color-base) 5%, white 95%);
+  --color-base-100: color-mix(in srgb, var(--color-base) 10%, white 90%);
+  --color-base-150: color-mix(in srgb, var(--color-base) 15%, white 85%);
+  --color-base-200: color-mix(in srgb, var(--color-base) 20%, white 80%);
+  --color-base-250: color-mix(in srgb, var(--color-base) 25%, white 75%);
+  --color-base-300: color-mix(in srgb, var(--color-base) 30%, white 70%);
+  --color-base-350: color-mix(in srgb, var(--color-base) 35%, white 65%);
+  --color-base-400: color-mix(in srgb, var(--color-base) 40%, white 60%);
+  --color-base-450: color-mix(in srgb, var(--color-base) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-base-550: color-mix(in srgb, var(--color-base) 95%, black 5%);
+  --color-base-600: color-mix(in srgb, var(--color-base) 90%, black 10%);
+  --color-base-650: color-mix(in srgb, var(--color-base) 85%, black 15%);
+  --color-base-700: color-mix(in srgb, var(--color-base) 80%, black 20%);
+  --color-base-750: color-mix(in srgb, var(--color-base) 75%, black 25%);
+  --color-base-800: color-mix(in srgb, var(--color-base) 70%, black 30%);
+  --color-base-850: color-mix(in srgb, var(--color-base) 65%, black 35%);
+  --color-base-900: color-mix(in srgb, var(--color-base) 60%, black 40%);
+  --color-base-950: color-mix(in srgb, var(--color-base) 55%, black 45%);
+  
+  /* Primary color - Material Design style */
+  --color-primary-500: var(--color-primary); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-primary-50: color-mix(in srgb, var(--color-primary) 5%, white 95%);
+  --color-primary-100: color-mix(in srgb, var(--color-primary) 10%, white 90%);
+  --color-primary-150: color-mix(in srgb, var(--color-primary) 15%, white 85%);
+  --color-primary-200: color-mix(in srgb, var(--color-primary) 20%, white 80%);
+  --color-primary-250: color-mix(in srgb, var(--color-primary) 25%, white 75%);
+  --color-primary-300: color-mix(in srgb, var(--color-primary) 30%, white 70%);
+  --color-primary-350: color-mix(in srgb, var(--color-primary) 35%, white 65%);
+  --color-primary-400: color-mix(in srgb, var(--color-primary) 40%, white 60%);
+  --color-primary-450: color-mix(in srgb, var(--color-primary) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-primary-550: color-mix(in srgb, var(--color-primary) 95%, black 5%);
+  --color-primary-600: color-mix(in srgb, var(--color-primary) 90%, black 10%);
+  --color-primary-650: color-mix(in srgb, var(--color-primary) 85%, black 15%);
+  --color-primary-700: color-mix(in srgb, var(--color-primary) 80%, black 20%);
+  --color-primary-750: color-mix(in srgb, var(--color-primary) 75%, black 25%);
+  --color-primary-800: color-mix(in srgb, var(--color-primary) 70%, black 30%);
+  --color-primary-850: color-mix(in srgb, var(--color-primary) 65%, black 35%);
+  --color-primary-900: color-mix(in srgb, var(--color-primary) 60%, black 40%);
+  --color-primary-950: color-mix(in srgb, var(--color-primary) 55%, black 45%);
+  
+  /* Secondary color - Material Design style */
+  --color-secondary-500: var(--color-secondary); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-secondary-50: color-mix(in srgb, var(--color-secondary) 5%, white 95%);
+  --color-secondary-100: color-mix(in srgb, var(--color-secondary) 10%, white 90%);
+  --color-secondary-150: color-mix(in srgb, var(--color-secondary) 15%, white 85%);
+  --color-secondary-200: color-mix(in srgb, var(--color-secondary) 20%, white 80%);
+  --color-secondary-250: color-mix(in srgb, var(--color-secondary) 25%, white 75%);
+  --color-secondary-300: color-mix(in srgb, var(--color-secondary) 30%, white 70%);
+  --color-secondary-350: color-mix(in srgb, var(--color-secondary) 35%, white 65%);
+  --color-secondary-400: color-mix(in srgb, var(--color-secondary) 40%, white 60%);
+  --color-secondary-450: color-mix(in srgb, var(--color-secondary) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-secondary-550: color-mix(in srgb, var(--color-secondary) 95%, black 5%);
+  --color-secondary-600: color-mix(in srgb, var(--color-secondary) 90%, black 10%);
+  --color-secondary-650: color-mix(in srgb, var(--color-secondary) 85%, black 15%);
+  --color-secondary-700: color-mix(in srgb, var(--color-secondary) 80%, black 20%);
+  --color-secondary-750: color-mix(in srgb, var(--color-secondary) 75%, black 25%);
+  --color-secondary-800: color-mix(in srgb, var(--color-secondary) 70%, black 30%);
+  --color-secondary-850: color-mix(in srgb, var(--color-secondary) 65%, black 35%);
+  --color-secondary-900: color-mix(in srgb, var(--color-secondary) 60%, black 40%);
+  --color-secondary-950: color-mix(in srgb, var(--color-secondary) 55%, black 45%);
+  
+  /* Accent color - Material Design style */
+  --color-accent-500: var(--color-accent); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-accent-50: color-mix(in srgb, var(--color-accent) 5%, white 95%);
+  --color-accent-100: color-mix(in srgb, var(--color-accent) 10%, white 90%);
+  --color-accent-150: color-mix(in srgb, var(--color-accent) 15%, white 85%);
+  --color-accent-200: color-mix(in srgb, var(--color-accent) 20%, white 80%);
+  --color-accent-250: color-mix(in srgb, var(--color-accent) 25%, white 75%);
+  --color-accent-300: color-mix(in srgb, var(--color-accent) 30%, white 70%);
+  --color-accent-350: color-mix(in srgb, var(--color-accent) 35%, white 65%);
+  --color-accent-400: color-mix(in srgb, var(--color-accent) 40%, white 60%);
+  --color-accent-450: color-mix(in srgb, var(--color-accent) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-accent-550: color-mix(in srgb, var(--color-accent) 95%, black 5%);
+  --color-accent-600: color-mix(in srgb, var(--color-accent) 90%, black 10%);
+  --color-accent-650: color-mix(in srgb, var(--color-accent) 85%, black 15%);
+  --color-accent-700: color-mix(in srgb, var(--color-accent) 80%, black 20%);
+  --color-accent-750: color-mix(in srgb, var(--color-accent) 75%, black 25%);
+  --color-accent-800: color-mix(in srgb, var(--color-accent) 70%, black 30%);
+  --color-accent-850: color-mix(in srgb, var(--color-accent) 65%, black 35%);
+  --color-accent-900: color-mix(in srgb, var(--color-accent) 60%, black 40%);
+  --color-accent-950: color-mix(in srgb, var(--color-accent) 55%, black 45%);
+  
+  /* Red color - Material Design style */
+  --color-red-500: var(--color-red); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-red-50: color-mix(in srgb, var(--color-red) 5%, white 95%);
+  --color-red-100: color-mix(in srgb, var(--color-red) 10%, white 90%);
+  --color-red-150: color-mix(in srgb, var(--color-red) 15%, white 85%);
+  --color-red-200: color-mix(in srgb, var(--color-red) 20%, white 80%);
+  --color-red-250: color-mix(in srgb, var(--color-red) 25%, white 75%);
+  --color-red-300: color-mix(in srgb, var(--color-red) 30%, white 70%);
+  --color-red-350: color-mix(in srgb, var(--color-red) 35%, white 65%);
+  --color-red-400: color-mix(in srgb, var(--color-red) 40%, white 60%);
+  --color-red-450: color-mix(in srgb, var(--color-red) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-red-550: color-mix(in srgb, var(--color-red) 95%, black 5%);
+  --color-red-600: color-mix(in srgb, var(--color-red) 90%, black 10%);
+  --color-red-650: color-mix(in srgb, var(--color-red) 85%, black 15%);
+  --color-red-700: color-mix(in srgb, var(--color-red) 80%, black 20%);
+  --color-red-750: color-mix(in srgb, var(--color-red) 75%, black 25%);
+  --color-red-800: color-mix(in srgb, var(--color-red) 70%, black 30%);
+  --color-red-850: color-mix(in srgb, var(--color-red) 65%, black 35%);
+  --color-red-900: color-mix(in srgb, var(--color-red) 60%, black 40%);
+  --color-red-950: color-mix(in srgb, var(--color-red) 55%, black 45%);
+  
+  /* Yellow color - Material Design style */
+  --color-yellow-500: var(--color-yellow); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-yellow-50: color-mix(in srgb, var(--color-yellow) 5%, white 95%);
+  --color-yellow-100: color-mix(in srgb, var(--color-yellow) 10%, white 90%);
+  --color-yellow-150: color-mix(in srgb, var(--color-yellow) 15%, white 85%);
+  --color-yellow-200: color-mix(in srgb, var(--color-yellow) 20%, white 80%);
+  --color-yellow-250: color-mix(in srgb, var(--color-yellow) 25%, white 75%);
+  --color-yellow-300: color-mix(in srgb, var(--color-yellow) 30%, white 70%);
+  --color-yellow-350: color-mix(in srgb, var(--color-yellow) 35%, white 65%);
+  --color-yellow-400: color-mix(in srgb, var(--color-yellow) 40%, white 60%);
+  --color-yellow-450: color-mix(in srgb, var(--color-yellow) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-yellow-550: color-mix(in srgb, var(--color-yellow) 95%, black 5%);
+  --color-yellow-600: color-mix(in srgb, var(--color-yellow) 90%, black 10%);
+  --color-yellow-650: color-mix(in srgb, var(--color-yellow) 85%, black 15%);
+  --color-yellow-700: color-mix(in srgb, var(--color-yellow) 80%, black 20%);
+  --color-yellow-750: color-mix(in srgb, var(--color-yellow) 75%, black 25%);
+  --color-yellow-800: color-mix(in srgb, var(--color-yellow) 70%, black 30%);
+  --color-yellow-850: color-mix(in srgb, var(--color-yellow) 65%, black 35%);
+  --color-yellow-900: color-mix(in srgb, var(--color-yellow) 60%, black 40%);
+  --color-yellow-950: color-mix(in srgb, var(--color-yellow) 55%, black 45%);
+  
+  /* Blue color - Material Design style */
+  --color-blue-500: var(--color-blue); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-blue-50: color-mix(in srgb, var(--color-blue) 5%, white 95%);
+  --color-blue-100: color-mix(in srgb, var(--color-blue) 10%, white 90%);
+  --color-blue-150: color-mix(in srgb, var(--color-blue) 15%, white 85%);
+  --color-blue-200: color-mix(in srgb, var(--color-blue) 20%, white 80%);
+  --color-blue-250: color-mix(in srgb, var(--color-blue) 25%, white 75%);
+  --color-blue-300: color-mix(in srgb, var(--color-blue) 30%, white 70%);
+  --color-blue-350: color-mix(in srgb, var(--color-blue) 35%, white 65%);
+  --color-blue-400: color-mix(in srgb, var(--color-blue) 40%, white 60%);
+  --color-blue-450: color-mix(in srgb, var(--color-blue) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-blue-550: color-mix(in srgb, var(--color-blue) 95%, black 5%);
+  --color-blue-600: color-mix(in srgb, var(--color-blue) 90%, black 10%);
+  --color-blue-650: color-mix(in srgb, var(--color-blue) 85%, black 15%);
+  --color-blue-700: color-mix(in srgb, var(--color-blue) 80%, black 20%);
+  --color-blue-750: color-mix(in srgb, var(--color-blue) 75%, black 25%);
+  --color-blue-800: color-mix(in srgb, var(--color-blue) 70%, black 30%);
+  --color-blue-850: color-mix(in srgb, var(--color-blue) 65%, black 35%);
+  --color-blue-900: color-mix(in srgb, var(--color-blue) 60%, black 40%);
+  --color-blue-950: color-mix(in srgb, var(--color-blue) 55%, black 45%);
+  
+  /* Navy color - Material Design style */
+  --color-navy-500: var(--color-navy); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-navy-50: color-mix(in srgb, var(--color-navy) 5%, white 95%);
+  --color-navy-100: color-mix(in srgb, var(--color-navy) 10%, white 90%);
+  --color-navy-150: color-mix(in srgb, var(--color-navy) 15%, white 85%);
+  --color-navy-200: color-mix(in srgb, var(--color-navy) 20%, white 80%);
+  --color-navy-250: color-mix(in srgb, var(--color-navy) 25%, white 75%);
+  --color-navy-300: color-mix(in srgb, var(--color-navy) 30%, white 70%);
+  --color-navy-350: color-mix(in srgb, var(--color-navy) 35%, white 65%);
+  --color-navy-400: color-mix(in srgb, var(--color-navy) 40%, white 60%);
+  --color-navy-450: color-mix(in srgb, var(--color-navy) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-navy-550: color-mix(in srgb, var(--color-navy) 95%, black 5%);
+  --color-navy-600: color-mix(in srgb, var(--color-navy) 90%, black 10%);
+  --color-navy-650: color-mix(in srgb, var(--color-navy) 85%, black 15%);
+  --color-navy-700: color-mix(in srgb, var(--color-navy) 80%, black 20%);
+  --color-navy-750: color-mix(in srgb, var(--color-navy) 75%, black 25%);
+  --color-navy-800: color-mix(in srgb, var(--color-navy) 70%, black 30%);
+  --color-navy-850: color-mix(in srgb, var(--color-navy) 65%, black 35%);
+  --color-navy-900: color-mix(in srgb, var(--color-navy) 60%, black 40%);
+  --color-navy-950: color-mix(in srgb, var(--color-navy) 55%, black 45%);
+  
+  /* Green color - Material Design style */
+  --color-green-500: var(--color-green); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-green-50: color-mix(in srgb, var(--color-green) 5%, white 95%);
+  --color-green-100: color-mix(in srgb, var(--color-green) 10%, white 90%);
+  --color-green-150: color-mix(in srgb, var(--color-green) 15%, white 85%);
+  --color-green-200: color-mix(in srgb, var(--color-green) 20%, white 80%);
+  --color-green-250: color-mix(in srgb, var(--color-green) 25%, white 75%);
+  --color-green-300: color-mix(in srgb, var(--color-green) 30%, white 70%);
+  --color-green-350: color-mix(in srgb, var(--color-green) 35%, white 65%);
+  --color-green-400: color-mix(in srgb, var(--color-green) 40%, white 60%);
+  --color-green-450: color-mix(in srgb, var(--color-green) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --color-green-550: color-mix(in srgb, var(--color-green) 95%, black 5%);
+  --color-green-600: color-mix(in srgb, var(--color-green) 90%, black 10%);
+  --color-green-650: color-mix(in srgb, var(--color-green) 85%, black 15%);
+  --color-green-700: color-mix(in srgb, var(--color-green) 80%, black 20%);
+  --color-green-750: color-mix(in srgb, var(--color-green) 75%, black 25%);
+  --color-green-800: color-mix(in srgb, var(--color-green) 70%, black 30%);
+  --color-green-850: color-mix(in srgb, var(--color-green) 65%, black 35%);
+  --color-green-900: color-mix(in srgb, var(--color-green) 60%, black 40%);
+  --color-green-950: color-mix(in srgb, var(--color-green) 55%, black 45%);
+  
+  /* Neutral colors  */
+  --neutral-color-500: var(--color-black); /* Main color */
+  
+  /* Tints (lighter) */
+  --color-neutral-50:  color-mix(in srgb, var(--color-black) 5%, white 95%);
+  --color-neutral-100: color-mix(in srgb, var(--color-black) 10%, white 90%);
+  --color-neutral-150: color-mix(in srgb, var(--color-black) 15%, white 85%);
+  --color-neutral-200: color-mix(in srgb, var(--color-black) 20%, white 80%);
+  --color-neutral-250: color-mix(in srgb, var(--color-black) 25%, white 75%);
+  --color-neutral-300: color-mix(in srgb, var(--color-black) 30%, white 70%);
+  --color-neutral-350: color-mix(in srgb, var(--color-black) 35%, white 65%);
+  --color-neutral-400: color-mix(in srgb, var(--color-black) 40%, white 60%);
+  --color-neutral-450: color-mix(in srgb, var(--color-black) 45%, white 55%);
+  --color-neutral-500: color-mix(in srgb, var(--color-black) 50%, white 50%);
+  --color-neutral-550: color-mix(in srgb, var(--color-black) 55%, white 45%);
+  --color-neutral-600: color-mix(in srgb, var(--color-black) 60%, white 40%);
+  --color-neutral-650: color-mix(in srgb, var(--color-black) 65%, white 35%);
+  --color-neutral-700: color-mix(in srgb, var(--color-black) 70%, white 30%);
+  --color-neutral-750: color-mix(in srgb, var(--color-black) 75%, white 25%);
+  --color-neutral-800: color-mix(in srgb, var(--color-black) 80%, white 20%);
+  --color-neutral-850: color-mix(in srgb, var(--color-black) 85%, white 15%);
+  --color-neutral-900: color-mix(in srgb, var(--color-black) 90%, white 10%);
+  --color-neutral-950: color-mix(in srgb, var(--color-black) 95%, white 5%);
+  
+  
+  /* Success color - Material Design style */
+  --success-color-500: var(--success-color); /* Main color */
+  
+  /* Tints (lighter) */
+  --success-color-50: color-mix(in srgb, var(--success-color) 5%, white 95%);
+  --success-color-100: color-mix(in srgb, var(--success-color) 10%, white 90%);
+  --success-color-150: color-mix(in srgb, var(--success-color) 15%, white 85%);
+  --success-color-200: color-mix(in srgb, var(--success-color) 20%, white 80%);
+  --success-color-250: color-mix(in srgb, var(--success-color) 25%, white 75%);
+  --success-color-300: color-mix(in srgb, var(--success-color) 30%, white 70%);
+  --success-color-350: color-mix(in srgb, var(--success-color) 35%, white 65%);
+  --success-color-400: color-mix(in srgb, var(--success-color) 40%, white 60%);
+  --success-color-450: color-mix(in srgb, var(--success-color) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --success-color-550: color-mix(in srgb, var(--success-color) 95%, black 5%);
+  --success-color-600: color-mix(in srgb, var(--success-color) 90%, black 10%);
+  --success-color-650: color-mix(in srgb, var(--success-color) 85%, black 15%);
+  --success-color-700: color-mix(in srgb, var(--success-color) 80%, black 20%);
+  --success-color-750: color-mix(in srgb, var(--success-color) 75%, black 25%);
+  --success-color-800: color-mix(in srgb, var(--success-color) 70%, black 30%);
+  --success-color-850: color-mix(in srgb, var(--success-color) 65%, black 35%);
+  --success-color-900: color-mix(in srgb, var(--success-color) 60%, black 40%);
+  --success-color-950: color-mix(in srgb, var(--success-color) 55%, black 45%);
+  
+  /* Error color - Material Design style */
+  --error-color-500: var(--error-color); /* Main color */
+  
+  /* Tints (lighter) */
+  --error-color-50: color-mix(in srgb, var(--error-color) 5%, white 95%);
+  --error-color-100: color-mix(in srgb, var(--error-color) 10%, white 90%);
+  --error-color-150: color-mix(in srgb, var(--error-color) 15%, white 85%);
+  --error-color-200: color-mix(in srgb, var(--error-color) 20%, white 80%);
+  --error-color-250: color-mix(in srgb, var(--error-color) 25%, white 75%);
+  --error-color-300: color-mix(in srgb, var(--error-color) 30%, white 70%);
+  --error-color-350: color-mix(in srgb, var(--error-color) 35%, white 65%);
+  --error-color-400: color-mix(in srgb, var(--error-color) 40%, white 60%);
+  --error-color-450: color-mix(in srgb, var(--error-color) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --error-color-550: color-mix(in srgb, var(--error-color) 95%, black 5%);
+  --error-color-600: color-mix(in srgb, var(--error-color) 90%, black 10%);
+  --error-color-650: color-mix(in srgb, var(--error-color) 85%, black 15%);
+  --error-color-700: color-mix(in srgb, var(--error-color) 80%, black 20%);
+  --error-color-750: color-mix(in srgb, var(--error-color) 75%, black 25%);
+  --error-color-800: color-mix(in srgb, var(--error-color) 70%, black 30%);
+  --error-color-850: color-mix(in srgb, var(--error-color) 65%, black 35%);
+  --error-color-900: color-mix(in srgb, var(--error-color) 60%, black 40%);
+  --error-color-950: color-mix(in srgb, var(--error-color) 55%, black 45%);
+  
+  /* Fail color - Material Design style */
+  --fail-color-500: var(--fail-color); /* Main color */
+  
+  /* Tints (lighter) */
+  --fail-color-50: color-mix(in srgb, var(--fail-color) 5%, white 95%);
+  --fail-color-100: color-mix(in srgb, var(--fail-color) 10%, white 90%);
+  --fail-color-150: color-mix(in srgb, var(--fail-color) 15%, white 85%);
+  --fail-color-200: color-mix(in srgb, var(--fail-color) 20%, white 80%);
+  --fail-color-250: color-mix(in srgb, var(--fail-color) 25%, white 75%);
+  --fail-color-300: color-mix(in srgb, var(--fail-color) 30%, white 70%);
+  --fail-color-350: color-mix(in srgb, var(--fail-color) 35%, white 65%);
+  --fail-color-400: color-mix(in srgb, var(--fail-color) 40%, white 60%);
+  --fail-color-450: color-mix(in srgb, var(--fail-color) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --fail-color-550: color-mix(in srgb, var(--fail-color) 95%, black 5%);
+  --fail-color-600: color-mix(in srgb, var(--fail-color) 90%, black 10%);
+  --fail-color-650: color-mix(in srgb, var(--fail-color) 85%, black 15%);
+  --fail-color-700: color-mix(in srgb, var(--fail-color) 80%, black 20%);
+  --fail-color-750: color-mix(in srgb, var(--fail-color) 75%, black 25%);
+  --fail-color-800: color-mix(in srgb, var(--fail-color) 70%, black 30%);
+  --fail-color-850: color-mix(in srgb, var(--fail-color) 65%, black 35%);
+  --fail-color-900: color-mix(in srgb, var(--fail-color) 60%, black 40%);
+  --fail-color-950: color-mix(in srgb, var(--fail-color) 55%, black 45%);
+  
+  /* Warning color - Material Design style */
+  --warning-color-500: var(--warning-color); /* Main color */
+  
+  /* Tints (lighter) */
+  --warning-color-50: color-mix(in srgb, var(--warning-color) 5%, white 95%);
+  --warning-color-100: color-mix(in srgb, var(--warning-color) 10%, white 90%);
+  --warning-color-150: color-mix(in srgb, var(--warning-color) 15%, white 85%);
+  --warning-color-200: color-mix(in srgb, var(--warning-color) 20%, white 80%);
+  --warning-color-250: color-mix(in srgb, var(--warning-color) 25%, white 75%);
+  --warning-color-300: color-mix(in srgb, var(--warning-color) 30%, white 70%);
+  --warning-color-350: color-mix(in srgb, var(--warning-color) 35%, white 65%);
+  --warning-color-400: color-mix(in srgb, var(--warning-color) 40%, white 60%);
+  --warning-color-450: color-mix(in srgb, var(--warning-color) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --warning-color-550: color-mix(in srgb, var(--warning-color) 95%, black 5%);
+  --warning-color-600: color-mix(in srgb, var(--warning-color) 90%, black 10%);
+  --warning-color-650: color-mix(in srgb, var(--warning-color) 85%, black 15%);
+  --warning-color-700: color-mix(in srgb, var(--warning-color) 80%, black 20%);
+  --warning-color-750: color-mix(in srgb, var(--warning-color) 75%, black 25%);
+  --warning-color-800: color-mix(in srgb, var(--warning-color) 70%, black 30%);
+  --warning-color-850: color-mix(in srgb, var(--warning-color) 65%, black 35%);
+  --warning-color-900: color-mix(in srgb, var(--warning-color) 60%, black 40%);
+  --warning-color-950: color-mix(in srgb, var(--warning-color) 55%, black 45%);
+  
+  /* Info color - Material Design style */
+  --info-color-500: var(--info-color); /* Main color */
+  
+  /* Tints (lighter) */
+  --info-color-50: color-mix(in srgb, var(--info-color) 5%, white 95%);
+  --info-color-100: color-mix(in srgb, var(--info-color) 10%, white 90%);
+  --info-color-150: color-mix(in srgb, var(--info-color) 15%, white 85%);
+  --info-color-200: color-mix(in srgb, var(--info-color) 20%, white 80%);
+  --info-color-250: color-mix(in srgb, var(--info-color) 25%, white 75%);
+  --info-color-300: color-mix(in srgb, var(--info-color) 30%, white 70%);
+  --info-color-350: color-mix(in srgb, var(--info-color) 35%, white 65%);
+  --info-color-400: color-mix(in srgb, var(--info-color) 40%, white 60%);
+  --info-color-450: color-mix(in srgb, var(--info-color) 45%, white 55%);
+  
+  /* Shades (darker) */
+  --info-color-550: color-mix(in srgb, var(--info-color) 95%, black 5%);
+  --info-color-600: color-mix(in srgb, var(--info-color) 90%, black 10%);
+  --info-color-650: color-mix(in srgb, var(--info-color) 85%, black 15%);
+  --info-color-700: color-mix(in srgb, var(--info-color) 80%, black 20%);
+  --info-color-750: color-mix(in srgb, var(--info-color) 75%, black 25%);
+  --info-color-800: color-mix(in srgb, var(--info-color) 70%, black 30%);
+  --info-color-850: color-mix(in srgb, var(--info-color) 65%, black 35%);
+  --info-color-900: color-mix(in srgb, var(--info-color) 60%, black 40%);
+  --info-color-950: color-mix(in srgb, var(--info-color) 55%, black 45%);
+}
+

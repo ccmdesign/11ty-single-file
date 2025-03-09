@@ -1,0 +1,164 @@
+
+/*
+* Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import url("https://cloud.typography.com/7264818/6254032/css/fonts.css");
+
+
+:root {
+  --me-font-display: "Idlewild SSm A", "Idlewild SSm B", sans-serif;
+  --me-font-body: "Ringside Regular SSm A", "Ringside Regular SSm B", sans-serif;
+  --me-font-icon: "Material Symbols Outlined";
+
+  /* Font weights */
+  --me-font-weight-light: 300;
+  --me-font-weight-normal: 400;
+  --me-font-weight-semibold: 500;
+  --me-font-weight-bold: 700;
+
+  /* Letter spacings */
+  --me-letter-spacing-denser: -0.03em;
+  --me-letter-spacing-dense: -0.015em;
+  --me-letter-spacing-normal: normal;
+  --me-letter-spacing-loose: 0.075em;
+  --me-letter-spacing-looser: 0.15em;
+
+  /* Line heights */
+  --me-line-height-denser: 1;
+  --me-line-height-dense: 1.4;
+  --me-line-height-normal: 1.8;
+  --me-line-height-loose: 2.2;
+  --me-line-height-looser: 2.6;
+
+  /*
+  * Z-indexes
+  */
+
+  --me-z-index-drawer: 700;
+  --me-z-index-dialog: 800;
+  --me-z-index-dropdown: 900;
+  --me-z-index-toast: 950;
+  --me-z-index-tooltip: 1000;
+}
+
+/*
+* Colors
+*/
+
+:root {
+/* Color Values */
+--me-color-white: hsla(255, 100%, 100%, 1);
+--me-color-black: hsla(0, 0%, 7%, 1);
+
+--me-color-base: hsla(229, 19%, 22%, 1);
+--me-color-primary: hsla(148, 57%, 24%, 1);
+--me-color-secondary: hsla(218, 19%, 38%, 1);
+--me-color-accent: hsla(15, 74%, 53%, 1);
+
+--me-color-red: hsla(352, 59%, 55%, 1);
+--me-color-yellow: hsla(36, 83%, 61%, 1);
+--me-color-blue: hsla(208, 50%, 38%, 1);
+--me-color-navy: hsla(201, 100%, 18%, 1);
+--me-color-green: hsla(188, 97%, 28%, 1);
+
+  /*
+* Border radii
+*/
+
+--me-border-radius-s: 0.1875rem; /* 3px */
+--me-border-radius-m: 0.375rem; /* 6px */
+--me-border-radius-l: 0.75rem; /* 12px */
+--me-border-radius-xl: 1.5rem; /* 24px */
+
+
+/* Borders */
+--me-border-width-s: 1px;
+--me-border-width-m: 2px;
+--me-border-width-l: 3px;
+--me-border-width-xl: 4px;
+
+/*
+* Elevations
+*/
+
+--me-box-shadow-inset: inset rgba(0, 0, 0, 0.03) 0px 0px 4px 0px;
+
+--me-box-shadow-s: rgba(0, 0, 0, 0.03) 0px 3px 4px 0px;
+--me-box-shadow-m: rgba(0, 0, 0, 0.03) 0px 3px 4px 0px, 
+                   rgba(0, 0, 0, 0.03) 0px 0px 4px 0px,
+                   rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+                   rgba(0, 0, 0, 0.035) 0px 0px 16px 0px;
+
+--me-box-shadow-l: rgba(0, 0, 0, 0.03) 0px 3px 4px 0px,
+                   rgba(0, 0, 0, 0.03) 0px 0px 4px 0px,
+                   rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+                   rgba(0, 0, 0, 0.05) 0px 0px 16px 0px,
+                   rgba(0, 0, 0, 0.035) 0px 0px 32px 0px;
+
+--me-box-shadow-xl: rgba(0, 0, 0, 0.03) 0px 3px 4px 0px,
+                    rgba(0, 0, 0, 0.03) 0px 0px 4px 0px,
+                    rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+                    rgba(0, 0, 0, 0.05) 0px 0px 16px 0px,
+                    rgba(0, 0, 0, 0.035) 0px 0px 32px 0px,
+                    rgba(0, 0, 0, 0.03) 0px 0px 64px 0px;
+
+/*
+* Transitions
+*/
+--me-transition-x-slow: 1000ms;
+--me-transition-slow: 500ms;
+--me-transition-medium: 250ms;
+--me-transition-fast: 150ms;
+--me-transition-x-fast: 50ms;
+
+/*
+* Spacings
+*/
+
+/* @link https://utopia.fyi/space/calculator?c=320,12,1.2,1240,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+--me-space-3xs: clamp(0.1875rem, 0.1658rem + 0.1087vw, 0.25rem);
+--me-space-2xs: clamp(0.375rem, 0.3315rem + 0.2174vw, 0.5rem);
+--me-space-xs: clamp(0.5625rem, 0.4973rem + 0.3261vw, 0.75rem);
+--me-space-s: clamp(0.75rem, 0.663rem + 0.4348vw, 1rem);
+--me-space-m: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem);
+--me-space-l: clamp(1.5rem, 1.3261rem + 0.8696vw, 2rem);
+--me-space-xl: clamp(2.25rem, 1.9891rem + 1.3043vw, 3rem);
+--me-space-2xl: clamp(3rem, 2.6522rem + 1.7391vw, 4rem);
+--me-space-3xl: clamp(4.5rem, 3.9783rem + 2.6087vw, 6rem);
+
+/* One-up pairs */
+--me-space-3xs-2xs: clamp(0.1875rem, 0.0788rem + 0.5435vw, 0.5rem);
+--me-space-2xs-xs: clamp(0.375rem, 0.2446rem + 0.6522vw, 0.75rem);
+--me-space-xs-s: clamp(0.5625rem, 0.4103rem + 0.7609vw, 1rem);
+--me-space-s-m: clamp(0.75rem, 0.4891rem + 1.3043vw, 1.5rem);
+--me-space-m-l: clamp(1.125rem, 0.8207rem + 1.5217vw, 2rem);
+--me-space-l-xl: clamp(1.5rem, 0.9783rem + 2.6087vw, 3rem);
+--me-space-xl-2xl: clamp(2.25rem, 1.6413rem + 3.0435vw, 4rem);
+--me-space-2xl-3xl: clamp(3rem, 1.9565rem + 5.2174vw, 6rem);
+
+/* Custom pairs */
+--me-space-s-l: clamp(0.75rem, 0.3152rem + 2.1739vw, 2rem);
+
+
+/* @link https://utopia.fyi/type/calculator?c=320,12,1.25,1240,14,1.414,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+/* Step -2: 7.68px → 7.0021px */
+--me-size--2: clamp(0.4376rem, 0.4947rem + -0.0737vw, 0.48rem);
+/* Step -1: 9.6px → 9.901px */
+--me-size--1: clamp(0.6rem, 0.5935rem + 0.0327vw, 0.6188rem);
+/* Step 0: 12px → 14px */
+--me-size-0: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
+/* Step 1: 15px → 19.796px */
+--me-size-1: clamp(0.9375rem, 0.8332rem + 0.5213vw, 1.2373rem);
+/* Step 2: 18.75px → 27.9915px */
+--me-size-2: clamp(1.1719rem, 0.971rem + 1.0045vw, 1.7495rem);
+/* Step 3: 23.4375px → 39.58px */
+--me-size-3: clamp(1.4648rem, 1.1139rem + 1.7546vw, 2.4738rem);
+/* Step 4: 29.2969px → 55.9662px */
+--me-size-4: clamp(1.8311rem, 1.2513rem + 2.8988vw, 3.4979rem);
+/* Step 5: 36.6211px → 79.1362px */
+--me-size-5: clamp(2.2888rem, 1.3646rem + 4.6212vw, 4.946rem);
+}

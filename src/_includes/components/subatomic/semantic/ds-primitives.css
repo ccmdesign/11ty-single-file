@@ -1,0 +1,91 @@
+:root {
+/* Font Families */
+--font-display: var(--me-font-display);
+--font-body : var(--me-font-body );
+--font-icon: var(--me-font-icon);
+
+/* Font sizes */
+--font-size-2xs: var(--me-size--2); /* 10px */
+--font-size-xs: var(--me-size--1); /* 12px */
+--font-size-s: var(--me-size-0); /* 14px */
+--font-size-m: var(--me-size-1); /* 16px */
+--font-size-l: var(--me-size-2); /* 20px */
+--font-size-xl: var(--me-size-3); /* 24px */
+--font-size-2xl: var(--me-size-4); /* 36px */
+--font-size-3xl: var(--me-size-5); /* 48px */
+
+/* Font weights */
+--font-weight-light: var(--me-font-weight-light);
+--font-weight-normal: var(--me-font-weight-normal);
+--font-weight-semibold: var(--me-font-weight-semibold);
+--font-weight-bold: var(--me-font-weight-bold);
+
+/* Line heights */
+--line-height-denser: var(--me-line-height-denser);
+--line-height-dense: var(--me-line-height-dense);
+--line-height-normal: var(--me-line-height-normal);
+--line-height-loose: var(--me-line-height-loose);
+--line-height-looser: var(--me-line-height-looser);
+
+/* Letter spacings */
+--letter-spacing-denser: var(--me-letter-spacing-denser);
+--letter-spacing-dense: var(--me-letter-spacing-dense);
+--letter-spacing-normal: var(--me-letter-spacing-normal);
+--letter-spacing-loose: var(--me-letter-spacing-loose);
+--letter-spacing-looser: var(--me-letter-spacing-looser);
+
+/* Text Transforms */
+--text-transform-none: none;
+--text-transform-uppercase: uppercase;
+--text-transform-lowercase: lowercase;
+--text-transform-capitalize: capitalize;
+
+/* Text Alignments */
+--text-align-left: left;
+--text-align-center: center;
+--text-align-right: right;
+--text-align-justify: justify;
+
+/* Text Decorations */
+--text-decoration-none: none;
+--text-decoration-underline: underline;
+--text-decoration-overline: overline;
+--text-decoration-line-through: line-through;
+
+/* Focus rings */
+--focus-ring-color: var(--color-primary-600);
+--focus-ring-style: solid;
+--focus-ring-width: 3px;
+--focus-ring: var(--focus-ring-style) var(--focus-ring-width) var(--focus-ring-color);
+--focus-ring-offset: 1px;
+
+/* Z-indexes */
+--z-index-drawer: var(--me-z-index-drawer);
+--z-index-dialog: var(--me-z-index-dialog);
+--z-index-dropdown: var(--me-z-index-dropdown);
+--z-index-toast: var(--me-z-index-toast);
+--z-index-tooltip: var(--me-z-index-tooltip);
+
+/* Borders Radii*/
+--border-radius-s: var(--me-border-radius-s);
+--border-radius-m: var(--me-border-radius-m);
+--border-radius-l: var(--me-border-radius-l);
+--border-radius-xl: var(--me-border-radius-xl);
+
+/* Borders Radii - Axioms*/
+--border-radius-circle: 50%;
+--border-radius-pill: 9999px;
+
+/* Borders Styles - Axioms */
+--border-style-solid: solid;
+--border-style-dashed: dashed;
+
+/* Borders */
+--border-width-s: var(--me-border-width-s);
+--border-width-m: var(--me-border-width-m);
+--border-width-l: var(--me-border-width-l);
+--border-width-xl: var(--me-border-width-xl);
+
+--border-style-solid: var(--me-border-style-solid);
+--border-style-dashed: var(--me-border-style-dashed);
+}

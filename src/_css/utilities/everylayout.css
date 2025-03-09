@@ -1,55 +1,75 @@
-.stack {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stack > * {
-  margin-block: 0;
-}
-
-.stack > * + * {
-  margin-block-start: var(--_stack-space, var(--size-1));
-}
-
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--_cluster-space, var(--size-0));
-  justify-content: flex-start;
-  align-items: center;
-
-  /* data-split - isso é um modifier do cluster, que empurra os elementos para o lado oposto do parent */
-  [data-split] {
-    margin-left: auto;
+@layer layout {
+  .stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-}
 
-.split-50-50 {
-  display: flex;
-  gap: var(--space-default);
-}
+  .stack > * {
+    margin-block: 0;
+  }
 
-.repel {
-  display: flex;
-  justify-content: space-between;
-}
+  .stack > * + * {
+    --_stack-space: var(--space-s);
+    margin-block-start: var(--_stack-space);
+  }
 
-.center {
-  box-sizing: content-box;
-  margin-inline: auto;
-  max-inline-size: var(--_center-measure, var(--content-width-m));
-}
+  .cluster {
+    --_cluster-space: var(--space-s);
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--size-10), 1fr));
-  gap: var(--_grid-gap, var(--space-default));
-}
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_cluster-space);
+    justify-content: flex-start;
+    align-items: center;
 
-.float\:left { float: left; }
+    /* data-split - isso é um modifier do cluster, que empurra os elementos para o lado oposto do parent */
+    [data-split] {
+      margin-left: auto;
+    }
+  }
 
-.aux {
-  outline: 2px solid var(--color-error);
-  background-color: var(--color-error-alpha-10);
+  .split-50-50 {
+    --_split-gutter: var(--space-m);
+
+    display: flex;
+    gap: var(--_split-gutter);
+  }
+
+  .repel {
+    --_repel-space: var(--space-m);
+
+    display: flex;
+    justify-content: space-between;
+    gap: var(--_repel-space);
+  }
+
+  .center {
+    --_center-measure: var(--center-measure);
+
+    box-sizing: content-box;
+    margin-inline: auto;
+    max-inline-size: var(--_center-measure);
+  }
+
+  .grid {
+    --_grid-gap: var(--space-m);
+    --_grid-column-size: var(--grid-column-size);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--_grid-column-size), 1fr));
+    gap: var(--_grid-gap);
+  }
+
+  .float\:left { float: left; }
+
+  .aux {
+    --_aux-color: var(--color-error);
+    --_aux-background-color: var(--color-error-100);
+    --_aux-border-color: var(--color-error-200);
+
+    outline: 2px solid var(--_aux-border-color);
+    color: var(--_aux-color);
+    background-color: var(--_aux-background-color);
+  }
 }

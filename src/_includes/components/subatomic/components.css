@@ -1,0 +1,112 @@
+:root {
+  /*
+* Forms
+*/
+
+/* Buttons */
+--button-font-size-small: var(--font-size-xs);
+--button-font-size-medium: var(--font-size-s);
+--button-font-size-large: var(--font-size-m);
+
+/* Inputs */
+/* @TODO: Not sure we will need this */
+--input-height-small: 1.875rem; /* 30px */
+--input-height-medium: 2.5rem; /* 40px */
+--input-height-large: 3.125rem; /* 50px */
+
+--input-background-color: var(--color-base-100);
+--input-background-color-hover: var(--color-base-200);
+--input-background-color-focus: var(--color-base-200);
+--input-background-color-disabled: var(--color-base-300);
+
+--input-border-color: var(--color-neutral-300);
+--input-border-color-hover: var(--color-neutral-400);
+--input-border-color-focus: var(--color-primary-500);
+--input-border-color-disabled: var(--color-neutral-300);
+
+--input-border-width: 1px;
+--input-required-content: '*';
+--input-required-content-offset: -2px;
+--input-required-content-color: var(--input-label-color);
+
+--input-border-radius-small: var(--border-radius-medium);
+--input-border-radius-medium: var(--border-radius-medium);
+--input-border-radius-large: var(--border-radius-medium);
+
+--input-font-family: var(--font-sans);
+--input-font-weight: var(--font-weight-normal);
+--input-font-size-small: var(--font-size-small);
+--input-font-size-medium: var(--font-size-medium);
+--input-font-size-large: var(--font-size-large);
+--input-letter-spacing: var(--letter-spacing-normal);
+
+--input-color: var(--color-neutral-700);
+--input-color-hover: var(--color-neutral-700);
+--input-color-focus: var(--color-neutral-700);
+--input-color-disabled: var(--color-neutral-900);
+--input-icon-color: var(--color-neutral-500);
+--input-icon-color-hover: var(--color-neutral-600);
+--input-icon-color-focus: var(--color-neutral-600);
+--input-placeholder-color: var(--color-neutral-500);
+--input-placeholder-color-disabled: var(--color-neutral-600);
+--input-spacing-small: var(--spacing-small);
+--input-spacing-medium: var(--spacing-medium);
+--input-spacing-large: var(--spacing-large);
+
+--input-focus-ring-color: hsl(198.6 88.7% 48.4% / 40%);
+--input-focus-ring-offset: 0;
+
+--input-filled-background-color: var(--color-neutral-100);
+--input-filled-background-color-hover: var(--color-neutral-100);
+--input-filled-background-color-focus: var(--color-neutral-100);
+--input-filled-background-color-disabled: var(--color-neutral-100);
+--input-filled-color: var(--color-neutral-800);
+--input-filled-color-hover: var(--color-neutral-800);
+--input-filled-color-focus: var(--color-neutral-700);
+--input-filled-color-disabled: var(--color-neutral-800);
+
+/* Labels */
+--input-label-font-size-s: var(--font-size-s);
+--input-label-font-size-m: var(--font-size-m);
+--input-label-font-size-l: var(--font-size-l);
+--input-label-color: inherit;
+
+/* Help text */
+--input-help-text-font-size-small: var(--font-size-xs);
+--input-help-text-font-size-medium: var(--font-size-s);
+--input-help-text-font-size-large: var(--font-size-m);
+--input-help-text-color: var(--color-base-500);
+
+/* Toggles (checkboxes, radios, switches) */
+--toggle-size-s: 0.875rem; /* 14px */
+--toggle-size-m: 1.125rem; /* 18px */
+--toggle-size-l: 1.375rem; /* 22px */
+
+/*
+* Overlays
+*/
+
+--overlay-background-color: hsl(240 3.8% 46.1% / 33%);
+
+/*
+* Panels
+*/
+
+--panel-background-color: var(--color-neutral-0);
+--panel-border-color: var(--color-neutral-200);
+--panel-border-width: 1px;
+
+/*
+* Tooltips
+*/
+
+--tooltip-border-radius: var(--border-radius-medium);
+--tooltip-background-color: var(--color-neutral-800);
+--tooltip-color: var(--color-neutral-0);
+--tooltip-font-family: var(--font-sans);
+--tooltip-font-weight: var(--font-weight-normal);
+--tooltip-font-size: var(--font-size-small);
+--tooltip-line-height: var(--line-height-dense);
+--tooltip-padding: var(--spacing-2x-small) var(--spacing-x-small);
+--tooltip-arrow-size: 6px;
+}

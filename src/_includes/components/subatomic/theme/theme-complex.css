@@ -1,0 +1,31 @@
+/* Contextual Configuration */
+:root {
+  --sidebar-padding-inline: var(--me-space-s-m);
+  --sidebar-padding-block: var(--me-space-m);
+
+  --link-color: var(--primary-color);
+
+  --padding-block: var(--space-s);
+  --padding-inline: var(--space-l);
+
+  --ui-padding-block: var(--space-s);
+  --ui-padding-inline: var(--space-s);
+
+  --surface-color-primary: var(--color-primary-500);
+  --surface-color-secondary: var(--color-secondary-500);
+  --surface-color-accent: var(--color-accent-500);
+  
+  --separator: var(--border-width-s) var(--border-style-solid) var(--color-base-10-tint);
+  --separator-dark: var(--border-width-s) var(--border-style-solid) var(--color-base-80-tint);
+}
+
+/* Component Specific Variables */
+:root {
+  --center-measure: 100ch;
+  --sidebar-right-width: 400px;
+  --grid-column-size: 320px;
+}
+
+:root {
+  
+}

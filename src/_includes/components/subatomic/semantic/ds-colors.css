@@ -1,0 +1,36 @@
+/* Mapping of Theme Colors to DS colors */
+:root {
+  --color-white: var(--me-color-white);
+  --color-black: var(--me-color-black);
+
+  --color-base: var(--me-color-base);
+  --color-primary: var(--me-color-primary);
+  --color-secondary: var(--me-color-secondary);
+  --color-accent: var(--me-color-accent);
+
+  --color-red: var(--me-color-red);
+  --color-yellow: var(--me-color-yellow);
+  --color-blue: var(--me-color-blue);
+  --color-navy: var(--me-color-navy);
+  --color-green: var(--me-color-green);
+}
+
+/* Color Aliases  */
+:root {
+  --color-dark: var(--color-base);
+  --color-light: var(--color-white);
+
+  --color-text: var(--color-base);
+  --color-link: var(--color-primary);
+
+  --color-success: var(--color-blue);
+  --color-error: var(--color-red);
+  --color-fail: var(--color-red);
+  --color-cancel: var(--color-red);
+  --color-warning: var(--color-yellow);
+  --color-info: var(--color-navy);
+}
+
+
+
+
