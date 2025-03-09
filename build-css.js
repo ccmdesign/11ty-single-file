@@ -15,8 +15,11 @@ if (!fs.existsSync(path.join(__dirname, '_site/css'))) {
 }
 
 try {
-  // Run PostCSS to build the CSS file
+  // Run PostCSS to build the main CSS file
   execSync('npx postcss src/_css/main.css -o _site/css/main.css', { stdio: 'inherit' });
+  
+  // Note: styleguide.css is now handled by Eleventy's passthrough copy
+  
   console.log('CSS built successfully!');
 } catch (error) {
   console.error('Error building CSS:', error);

@@ -189,8 +189,18 @@ module.exports = function(eleventyConfig) {
     });
   });
   
+  // Passthrough copy for styleguide.css
+  eleventyConfig.addPassthroughCopy({
+    "src/_css/styleguide.css": "css/styleguide.css"
+  });
+  
   // Add a shortcode to include component CSS
   eleventyConfig.addShortcode("componentCSS", function(componentPath) {
+    // Special case for styleguide - we don't want to include it in main.css
+    if (componentPath === "styleguide" || componentPath.includes("styleguide/")) {
+      return `<!-- Styleguide CSS is loaded separately -->`;
+    }
+    
     const cssPath = path.join(__dirname, "src", "_includes", componentPath + ".css");
     if (fs.existsSync(cssPath)) {
       // Instead of linking to individual CSS files, we'll just note that they exist

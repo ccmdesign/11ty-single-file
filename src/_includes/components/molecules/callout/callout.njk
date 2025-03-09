@@ -1,0 +1,36 @@
+{# 
+  Callout Component
+  
+  Parameters:
+  - color: The semantic color of the callout (default: "info")
+    Options: "info", "success", "warning", "error", "primary", "secondary", "accent"
+  - content: The content to display in the callout
+  - title: Optional title for the callout
+#}
+
+{% set calloutColor = color | default("info") %}
+
+<div class="callout" data-color="{{ calloutColor }}">
+  {% if title %}
+    <h4><strong>{{ title }}</strong></h4>
+  {% endif %}
+  
+  {% if content %}
+    <p>{{ content }}</p>
+  {% else %}
+    {{ caller() if caller else "" }}
+  {% endif %}
+</div>
+
+{# Example usage:
+  {% include "components/molecules/callout/callout.njk" with {
+    color: "success",
+    title: "Success Message",
+    content: "Your action was completed successfully."
+  } %}
+
+  Or with a call block:
+  {% call "components/molecules/callout/callout.njk" with { color: "warning", title: "Warning" } %}
+    <p>This is a custom warning message with <a href="#">a link</a>.</p>
+  {% endcall %}
+#}

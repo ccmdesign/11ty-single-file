@@ -9,6 +9,8 @@ Buttons are interactive elements that allow users to trigger actions or navigate
 
 ## Usage
 
+{% include "components/atoms/button/button.njk" %}
+
 ```njk
 {% include "components/atoms/button/button.njk" %}
 ```

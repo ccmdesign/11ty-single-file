@@ -1,0 +1,75 @@
+.callout {
+  /* exposing variables to be used in the component */
+  --_callout-color: var(--status-info-text);
+
+  --_callout-padding-block: var(--space-m-l);
+  --_callout-padding-inline: var(--base-padding-inline);
+
+  --_callout-border-radius: var(--border-radius-m);
+  --_callout-box-shadow: 0;
+
+  --_callout-border-width: 1px;
+  --_callout-border-style: solid;
+
+
+  --_callout-border-color: var(--status-info-border);
+  --_callout-background-color: var(--status-info-bg);
+}
+
+.callout {
+  /* applying the variables to the component */
+  padding: var(--_callout-padding-block) var(--_callout-padding-inline);
+  border-radius: var(--_callout-border-radius);
+  box-shadow: var(--_callout-box-shadow);
+  border: var(--_callout-border-width) var(--_callout-border-style) var(--_callout-border-color);
+  background-color: var(--_callout-background-color);
+  color: var(--_callout-color);
+
+  *:only-child { text-align: center; }
+}
+
+.callout[data-color="primary"] {
+  --_callout-color: var(--button-primary-text);
+  --_callout-border-color: var(--button-primary-border);
+  --_callout-background-color: var(--button-primary-bg);
+}
+
+.callout[data-color="secondary"] {
+  --_callout-color: var(--button-secondary-text);
+  --_callout-border-color: var(--button-secondary-border);
+  --_callout-background-color: var(--button-secondary-bg);
+}
+
+.callout[data-color="accent"] {
+  --_callout-color: var(--text-inverse);
+  --_callout-border-color: var(--accent-default);
+  --_callout-background-color: var(--accent-default);
+}
+
+.callout[data-color="green"],
+.callout[data-color="success"] {
+  --_callout-color: var(--status-success-text);
+  --_callout-border-color: var(--status-success-border);
+  --_callout-background-color: var(--status-success-bg);
+}
+
+.callout[data-color="warning"],
+.callout[data-color="yellow"] {
+  --_callout-color: var(--status-warning-text);
+  --_callout-border-color: var(--status-warning-border);
+  --_callout-background-color: var(--status-warning-bg);
+}
+
+.callout[data-color="error"],
+.callout[data-color="red"] {
+  --_callout-color: var(--status-error-text);
+  --_callout-border-color: var(--status-error-border);
+  --_callout-background-color: var(--status-error-bg);
+}
+
+.callout[data-color="info"],
+.callout[data-color="blue"] {
+  --_callout-color: var(--status-info-text);
+  --_callout-border-color: var(--status-info-border);
+  --_callout-background-color: var(--status-info-bg);
+}

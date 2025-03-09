@@ -6,8 +6,7 @@
 /* Import utility styles */
 @import-glob "utilities/*.css";
 
-/* Import style guide styles */
-@import 'styleguide.css';
+/* Import component CSS from _includes directory, but exclude styleguide.css */
+@import-glob "../_includes/components/**/**/*.css";
 
-/* Import component CSS from _includes directory */
-@import-glob "../_includes/components/**/*.css"; 
+/* Note: styleguide.css is loaded separately in the layout */ 

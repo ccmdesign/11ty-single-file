@@ -364,3 +364,23 @@
     bottom: -0.25rem;
   }
 }
+
+
+/* Add a special border for white swatches so they're visible */
+.swatch[style*="--white-color"] {
+  border: 1px solid var(--base-color-100, #eee);
+}
+
+/* Ensure text is readable on dark backgrounds */
+.swatch[style*="--black-color"] + .swatch-info,
+.swatch[style*="--base-color-800"] + .swatch-info,
+.swatch[style*="--base-color-900"] + .swatch-info,
+.swatch[style*="--primary-color-800"] + .swatch-info,
+.swatch[style*="--primary-color-900"] + .swatch-info,
+.swatch[style*="--secondary-color-800"] + .swatch-info,
+.swatch[style*="--secondary-color-900"] + .swatch-info,
+.swatch[style*="--accent-color-800"] + .swatch-info,
+.swatch[style*="--accent-color-900"] + .swatch-info,
+.swatch[style*="--navy-color"] + .swatch-info {
+  border-top: none;
+}

@@ -29,13 +29,15 @@
   {% for category in navCategories %}
     <details {% if category.defaultOpen %}open{% endif %}>
       <summary>
-        <a href="{{ category.url }}">{{ category.title }}</a>
+        {{ category.title }}
       </summary>
       <ul>
-        {%- set categoryPages = collections.all | eleventyNavigation(category.key) -%}
-        {%- for entry in categoryPages %}
+        {%- set categoryDocs = collections["docs_" + category.key | lower] -%}
+        {%- for doc in categoryDocs %}
           <li>
-            <a href="{{ entry.url }}">{{ entry.title }}</a>
+            <a href="{{ doc.url }}" {% if page.url == doc.url %}class="active"{% endif %}>
+              {{ doc.data.title }}
+            </a>
           </li>
         {%- endfor %}
       </ul>
@@ -53,6 +55,15 @@
       const summaryLink = detail.querySelector('summary a');
       if (summaryLink && currentPath.includes(summaryLink.getAttribute('href'))) {
         detail.open = true;
+      }
+      
+      // Also check if any child links are active
+      const links = detail.querySelectorAll('ul a');
+      for (let link of links) {
+        if (link.classList.contains('active')) {
+          detail.open = true;
+          break;
+        }
       }
     });
   });
